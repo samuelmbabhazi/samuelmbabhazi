@@ -21,6 +21,7 @@ I specialize in modern web technologies and enjoy working with:
 
 As an advocate for open source, I actively contribute to:
 - [Ever-Gauzy](https://github.com/ever-co/ever-gauzy)
+- [Ever-Traduora](https://github.com/ever-co/ever-traduora)
 - [Ever-Teams](https://github.com/ever-co/ever-teams)
 
 ### GitHub Stats 📊
