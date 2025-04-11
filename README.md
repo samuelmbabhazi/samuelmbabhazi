@@ -1,7 +1,7 @@
 # Samuel Mbabhazi | Full-Stack Developer 💻✨
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&pause=1000&color=7E3BF2&center=true&vCenter=true&width=500&lines=Angular+%26+WordPress+Expert;Clean+Code+Enthusiast;Open+Source+Contributor;Full-Stack+Developer" alt="Specialties" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&pause=1000&color=7E3BF2&center=true&vCenter=true&width=500&lines=Clean+Code+Enthusiast;Open+Source+Contributor;Full-Stack+Developer" alt="Specialties" />
 </div>
 
 <div align="center" style="margin-bottom: 20px;">
