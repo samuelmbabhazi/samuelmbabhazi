@@ -109,6 +109,18 @@
   <a href="https://github.com/ever-co/ever-teams">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=ever-co&repo=ever-teams&theme=radical&show_owner=true&bg_color=0D1117" alt="Ever-Teams"/>
   </a>
+<!-- PR Merged badge -->
+<a href="https://github.com/nestjs/cache-manager/pulls?q=is%3Apr+is%3Amerged">
+  <img src="https://img.shields.io/badge/PR-Merged-success?style=for-the-badge&logo=github&color=238636" alt="PR Merged"/>
+</a>
+
+<br/><br/>
+
+<!-- Repo card -->
+<a href="https://github.com/nestjs/cache-manager">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=nestjs&repo=cache-manager&theme=github-dark&show_owner=true&bg_color=0D1117&border_color=30363D" 
+       alt="NestJS Cache Manager"/>
+</a>
 </div>
 
 <!-- Latest Articles -->
