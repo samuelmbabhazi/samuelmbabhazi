@@ -72,7 +72,7 @@
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
 
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=samuelmbabhazi&theme=radical&hide_border=false&include_all_commits=true&count_private=true&show_icons=true)
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=samuelmbabhazi&theme=radical)
 
 ![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=samuelmbabhazi&theme=radical&hide_border=false)
 
@@ -80,21 +80,7 @@
 
 </div>
 
-## 🏆 GitHub Trophies
 
-<div align="center">
-  
-![Trophies](https://github-profile-trophy.vercel.app/?username=samuelmbabhazi&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-
-</div>
-
-## 🔝 Top Contributed Repo
-
-<div align="center">
-  
-![Contributor Stats](https://github-contributor-stats.vercel.app/api?username=samuelmbabhazi&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
-</div>
 
 <!-- Open Source Contributions -->
 ## 🌟 Open Source Contributions
@@ -109,16 +95,10 @@
   <a href="https://github.com/ever-co/ever-teams">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=ever-co&repo=ever-teams&theme=radical&show_owner=true&bg_color=0D1117" alt="Ever-Teams"/>
   </a>
-<!-- PR Merged badge -->
-<a href="https://github.com/nestjs/cache-manager/pulls?q=is%3Apr+is%3Amerged">
-  <img src="https://img.shields.io/badge/PR-Merged-success?style=for-the-badge&logo=github&color=238636" alt="PR Merged"/>
-</a>
-
-<br/><br/>
 
 <!-- Repo card -->
 <a href="https://github.com/nestjs/cache-manager">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=nestjs&repo=cache-manager&theme=github-dark&show_owner=true&bg_color=0D1117&border_color=30363D" 
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=nestjs&repo=cache-manager&theme=radical&show_owner=true&bg_color=0D1117&border_color=ea2845" 
        alt="NestJS Cache Manager"/>
 </a>
 </div>
