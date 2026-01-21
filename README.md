@@ -70,14 +70,18 @@
 <!-- GitHub Stats Section -->
 ## 📊 GitHub Stats
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
-
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=samuelmbabhazi&theme=radical)
-
-![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=samuelmbabhazi&theme=radical&hide_border=false)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=samuelmbabhazi&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
+<div align="center">
+  
+  <!-- GitHub Stats -->
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=samuelmbabhazi&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=samuelmbabhazi&layout=compact&theme=radical" />
+  
+  
+  
+  <!-- GitHub Activity Graph (optional) -->
+  <br/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=samuelmbabhazi&theme=redical" />
+  
 </div>
 
 
