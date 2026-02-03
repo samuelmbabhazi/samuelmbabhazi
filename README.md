@@ -88,24 +88,21 @@
 
 <!-- Open Source Contributions -->
 ## 🌟 Open Source Contributions
-
-<div align="center" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0;">
+<div align="center" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
   <a href="https://github.com/ever-co/ever-gauzy">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ever-co&repo=ever-gauzy&theme=radical&show_owner=true&bg_color=0D1117" alt="Ever-Gauzy"/>
+    <img src="https://img.shields.io/github/stars/ever-co/ever-gauzy?style=for-the-badge&logo=github&label=Ever%20Gauzy&color=ea2845" />
   </a>
   <a href="https://github.com/ever-co/ever-traduora">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ever-co&repo=ever-traduora&theme=radical&show_owner=true&bg_color=0D1117" alt="Ever-Traduora"/>
+    <img src="https://img.shields.io/github/stars/ever-co/ever-traduora?style=for-the-badge&logo=github&label=Ever%20Traduora&color=ea2845" />
   </a>
   <a href="https://github.com/ever-co/ever-teams">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ever-co&repo=ever-teams&theme=radical&show_owner=true&bg_color=0D1117" alt="Ever-Teams"/>
+    <img src="https://img.shields.io/github/stars/ever-co/ever-teams?style=for-the-badge&logo=github&label=Ever%20Teams&color=ea2845" />
   </a>
-
-<!-- Repo card -->
-<a href="https://github.com/nestjs/cache-manager">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=nestjs&repo=cache-manager&theme=radical&show_owner=true&bg_color=0D1117&border_color=ea2845" 
-       alt="NestJS Cache Manager"/>
-</a>
+  <a href="https://github.com/nestjs/cache-manager">
+    <img src="https://img.shields.io/github/stars/nestjs/cache-manager?style=for-the-badge&logo=nestjs&label=Nestjs/Cache%20Manager&color=ea2845" />
+  </a>
 </div>
+
 
 <!-- Latest Articles -->
 ## 📝 Latest Tech Articles
