@@ -97,7 +97,7 @@ Full-Stack Developer based in Kigali, Rwanda. I build clean, scalable web and mo
   <br/>
 
   <!-- GitHub Trophies -->
-  <img src="https://github-profile-trophy.vercel.app/?username=samuelmbabhazi&theme=radical&no-frame=true&no-bg=true&column=7" />
+
 
 </div>
 
