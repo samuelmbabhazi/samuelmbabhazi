@@ -4,7 +4,7 @@
 
   <br/>
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=7E3BF2&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=TypeScript-First+Architecture+%7C+NestJS+%7C+Angular+%7C+Next.js;NestJS+Core+Contributor+%7C+4%2B+Years+Shipping+Production+Code" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=7E3BF2&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=TypeScript-First+Architecture+%7C+NestJS+%7C+Angular+%7C+Next.js;NestJS+Core+Contributor+%7C+5%2B+Years+Shipping+Production+Code" alt="Typing SVG" />
 
   <br/>
  <a href="https://www.upwork.com/freelancers/~013636cfc522b0d380">
