@@ -47,6 +47,7 @@ const samuel: SeniorEngineer = {
         "Enterprise open-source contributions"
     ],
     openSource: {
+        mongoose: "types(model): keep Model.schema typed (PR #16406, merged by the maintainer)",
         nestjsCore: "feat: Cacheable nonBlocking mode support (PR #962, shipped in v3.1.0)",
         everCo: ["Ever Gauzy", "Ever Teams", "Ever Traduora"]
     },
@@ -128,13 +129,14 @@ const samuel: SeniorEngineer = {
 ## Open Source Contributions
 
 > Contributed to production codebases used by thousands of developers worldwide.
-> Feature PR merged into **NestJS core ecosystem** and shipped in release 3.1.0.
+> Type system fix merged into **Mongoose** by its maintainer. Feature PR merged into **NestJS core ecosystem** and shipped in release 3.1.0.
 > Recognized with **Pair Extraordinaire x3** and **Pull Shark x3** GitHub achievements.
 
 <div align="center">
 
 | Project | Role | Stack |
 |---------|------|-------|
+| [**Mongoose**](https://github.com/Automattic/mongoose) | Fixed a type system regression where `Model.schema` resolved to `any` on handwritten model annotations, restoring typed schema access for every project that writes `Model<T>` by hand. Merged by the maintainer without changes. [PR #16406](https://github.com/Automattic/mongoose/pull/16406) | `TypeScript` `Mongoose` `Type System` |
 | [**nestjs/cache-manager**](https://github.com/nestjs/cache-manager) | Added support for `Cacheable` instances with `nonBlocking` mode in the NestJS cache provider factory, shipped in [release 3.1.0](https://github.com/nestjs/cache-manager/releases). [PR #962](https://github.com/nestjs/cache-manager/pull/962) | `TypeScript` `NestJS` `Cacheable` `Keyv` |
 | [**Ever Gauzy**](https://github.com/ever-co/ever-gauzy) | API correctness patches, module boundary fixes, Angular component improvements in time-tracking and HR management views across a multi-tenant monorepo. | `Angular` `NestJS` `GraphQL` `TypeORM` `PostgreSQL` |
 | [**Ever Teams**](https://github.com/ever-co/ever-teams) | Service-layer improvements, state management, and real-time task collaboration features on an open work and project management platform. | `Next.js` `React` `TypeScript` `Tailwind CSS` `Jotai` `TanStack Query` |
@@ -143,6 +145,9 @@ const samuel: SeniorEngineer = {
 </div>
 
 <div align="center" style="margin-top: 15px;">
+  <a href="https://github.com/Automattic/mongoose">
+    <img src="https://img.shields.io/github/stars/Automattic/mongoose?style=for-the-badge&logo=mongoose&label=Mongoose&color=7E3BF2" />
+  </a>
   <a href="https://github.com/ever-co/ever-gauzy">
     <img src="https://img.shields.io/github/stars/ever-co/ever-gauzy?style=for-the-badge&logo=github&label=Ever%20Gauzy&color=7E3BF2" />
   </a>
