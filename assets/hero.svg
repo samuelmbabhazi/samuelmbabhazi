@@ -1,6 +1,6 @@
-<svg width="1200" height="290" viewBox="0 0 1200 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="370" viewBox="0 0 1200 370" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="frame"><rect width="1200" height="290" rx="20"/></clipPath>
+    <clipPath id="frame"><rect width="1200" height="370" rx="20"/></clipPath>
     <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
@@ -24,40 +24,32 @@
       @keyframes sweep { 0% { transform: translateX(-320px);} 100% { transform: translateX(1240px);} }
       .sweep { animation: sweep 7s ease-in-out infinite; }
       @keyframes ringspin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
-      .ring { transform-origin: 1042px 118px; animation: ringspin 26s linear infinite; }
+      .ring { transform-origin: 1030px 140px; animation: ringspin 26s linear infinite; }
     </style>
   </defs>
-
   <g clip-path="url(#frame)">
-    <rect width="1200" height="290" fill="#0A0A0C"/>
-    <rect x="0.5" y="0.5" width="1199" height="289" rx="19.5" stroke="#26262B"/>
-
-    <g class="orb-a"><circle cx="190" cy="60" r="230" fill="url(#orb)"/></g>
-    <g class="orb-b"><circle cx="1030" cy="250" r="260" fill="url(#orb)"/></g>
-    <g class="orb-c"><circle cx="700" cy="-40" r="180" fill="url(#orb)"/></g>
-
-    <!-- rotating dashed ring, right side -->
+    <rect width="1200" height="370" fill="#0A0A0C"/>
+    <g class="orb-a"><circle cx="190" cy="60" r="240" fill="url(#orb)"/></g>
+    <g class="orb-b"><circle cx="1030" cy="320" r="270" fill="url(#orb)"/></g>
+    <g class="orb-c"><circle cx="700" cy="-40" r="190" fill="url(#orb)"/></g>
     <g class="ring" opacity="0.5">
-      <circle cx="1042" cy="118" r="64" stroke="#3F3F46" stroke-width="1.4" stroke-dasharray="3 9" fill="none"/>
+      <circle cx="1030" cy="140" r="72" stroke="#3F3F46" stroke-width="1.6" stroke-dasharray="3 9" fill="none"/>
     </g>
-    <circle cx="1042" cy="118" r="40" stroke="#26262B" stroke-width="1.2" fill="none"/>
-    <text x="1042" y="126" text-anchor="middle" class="mono" font-size="22" fill="#F4F4F5">&lt;/&gt;</text>
-
-    <!-- name block -->
-    <text x="72" y="112" class="sans" font-size="54" font-weight="800" fill="#F4F4F5" letter-spacing="-1.5">Samuel Mbabhazi</text>
-    <text x="74" y="152" class="sans" font-size="22" font-weight="600" fill="#A1A1AA">Senior Full-Stack Engineer · TypeScript First</text>
-
-    <!-- animated underline -->
-    <rect x="74" y="170" width="560" height="1.5" fill="#26262B"/>
+    <circle cx="1030" cy="140" r="46" stroke="#26262B" stroke-width="1.4" fill="none"/>
+    <text x="1030" y="150" text-anchor="middle" class="mono" font-size="26" fill="#F4F4F5">&lt;/&gt;</text>
+    <text x="64" y="126" class="sans" font-size="68" font-weight="800" fill="#F4F4F5" letter-spacing="-2">Samuel Mbabhazi</text>
+    <text x="66" y="176" class="sans" font-size="30" font-weight="700" fill="#D4D4D8">Full-Stack Developer with 5+ Years of Experience</text>
+    <rect x="66" y="196" width="690" height="2" fill="#26262B"/>
     <g style="clip-path: inset(0 0 0 0);">
-      <rect x="74" y="169" width="220" height="3" rx="1.5" fill="url(#shine)" class="sweep" opacity="0.8"/>
+      <rect x="66" y="195" width="240" height="4" rx="2" fill="url(#shine)" class="sweep" opacity="0.85"/>
     </g>
-
-    <text x="74" y="206" class="mono" font-size="15.5" fill="#D4D4D8">merged into <tspan fill="#FFFFFF" font-weight="700">Mongoose</tspan> · <tspan fill="#FFFFFF" font-weight="700">NestJS ecosystem</tspan> · <tspan fill="#FFFFFF" font-weight="700">maintainer at Ever</tspan></text>
-
+    <text x="66" y="238" class="sans" font-size="23" fill="#A1A1AA">Open source contributor, passionate about building clean, scalable web applications</text>
     <g>
-      <circle cx="80" cy="243" r="4.5" fill="#F4F4F5" class="dot"/>
-      <text x="94" y="248" class="sans" font-size="15" fill="#A1A1AA">open to remote roles, freelance projects and open source collaboration</text>
+      <circle cx="74" cy="278" r="5.5" fill="#F4F4F5" class="dot"/>
+      <text x="92" y="285" class="sans" font-size="19" fill="#A1A1AA">open to remote roles, freelance projects and open source collaboration</text>
     </g>
+    <rect x="64" y="314" width="1072" height="2" rx="1" fill="url(#shine)" opacity="0.3"/>
+    <text x="64" y="348" class="mono" font-size="17" fill="#8B949E">my code ships in libraries downloaded millions of times a week</text>
   </g>
+  <rect x="0.5" y="0.5" width="1199" height="369" rx="19.5" stroke="#26262B" fill="none"/>
 </svg>

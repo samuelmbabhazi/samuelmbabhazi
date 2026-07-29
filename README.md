@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Samuel Mbabhazi · Senior Full-Stack Engineer · TypeScript first · merged into Mongoose and the NestJS ecosystem · maintainer at Ever"/>
+  <img src="./assets/hero.svg" width="100%" alt="Samuel Mbabhazi · Full-Stack Developer with 5+ years of experience · open source contributor, passionate about building clean, scalable web applications"/>
 </div>
 
 <br/>
