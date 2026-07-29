@@ -1,0 +1,28 @@
+<svg width="390" height="224" viewBox="0 0 390 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="f"><rect width="390" height="224" rx="16"/></clipPath>
+    <style>
+      .sans { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; }
+      @keyframes march { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -1180; } }
+      .border-run { animation: march 7s linear infinite; }
+    </style>
+  </defs>
+  <g clip-path="url(#f)">
+    <rect width="390" height="224" fill="#0C0C0F"/>
+    <ellipse cx="60" cy="0" rx="240" ry="100" fill="#FFFFFF" opacity="0.04"/>
+    <text x="28" y="52" class="sans" font-size="23" font-weight="800" fill="#F4F4F5">NestJS cache-manager</text>
+    <text x="28" y="74" class="sans" font-size="12.5" fill="#71717A">Official NestJS caching module</text>
+    <rect x="288" y="34" width="76" height="26" rx="13" fill="none" stroke="#F4F4F5" stroke-opacity="0.75"/>
+    <text x="326" y="51" text-anchor="middle" class="sans" font-size="11.5" font-weight="700" fill="#F4F4F5" letter-spacing="1">SHIPPED</text>
+    <g class="sans" font-size="14.5">
+      <text x="28" y="112" fill="#A1A1AA">Cacheable support with nonBlocking</text>
+      <text x="28" y="133" fill="#A1A1AA">mode in the provider factory.</text>
+      <text x="28" y="162" fill="#F4F4F5" font-weight="600">Shipped to every user</text>
+      <text x="28" y="182" fill="#F4F4F5" font-weight="600">in release 3.1.0.</text>
+    </g>
+    <text x="28" y="207" class="mono" font-size="12" fill="#71717A">nestjs/cache-manager · PR #962</text>
+  </g>
+  <rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="#26262B" stroke-width="1.5"/>
+  <rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="70 1110" class="border-run"/>
+</svg>
