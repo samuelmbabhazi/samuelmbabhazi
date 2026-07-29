@@ -14,7 +14,7 @@
 
   <br/><br/>
 
-  <a href="https://github.com/nestjs/mongoose/pull/2859"><img src="./assets/card-nestmongoose.svg" width="390" alt="nestjs/mongoose: ModelWithSchema type keeping model.schema typed across mongoose 7, 8 and 9, in review"/></a>&nbsp;<a href="https://github.com/ever-co/ever-teams/commits?author=samuelmbabhazi"><img src="./assets/card-teams.svg" width="390" alt="Ever Teams and Traduora, maintainer: real time collaboration features, translation workflow APIs"/></a>&nbsp;<a href="https://commons.wikimedia.org/wiki/User:Samuel_mbabhazi"><img src="./assets/card-wikipedia.svg" width="390" alt="Wikimedia: writing and editing encyclopedia articles, contributing media on Commons"/></a>
+  <a href="https://github.com/nestjs/mongoose/pull/2859"><img src="./assets/card-nestmongoose.svg" width="390" alt="nestjs/mongoose: ModelWithSchema type keeping model.schema typed across mongoose 7, 8 and 9, in review"/></a>&nbsp;<a href="https://github.com/ever-co/ever-teams/commits?author=samuelmbabhazi"><img src="./assets/card-teams.svg" width="390" alt="Ever Teams, maintainer: real time collaboration features, service layer and state management"/></a>&nbsp;<a href="https://github.com/ever-co/ever-traduora/commits?author=samuelmbabhazi"><img src="./assets/card-traduora.svg" width="390" alt="Ever Traduora, maintainer: translation workflow APIs, import and export pipeline"/></a>&nbsp;<a href="https://commons.wikimedia.org/wiki/User:Samuel_mbabhazi"><img src="./assets/card-wikipedia.svg" width="390" alt="Wikimedia: writing and editing encyclopedia articles, contributing media on Commons"/></a>
 
 </div>
 
