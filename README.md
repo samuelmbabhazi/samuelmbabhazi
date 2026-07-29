@@ -10,11 +10,11 @@
 
 <div align="center">
 
-  <a href="https://github.com/Automattic/mongoose/pull/16406"><img src="./assets/card-mongoose.svg" width="32.5%" alt="Mongoose: type system fix, Model.schema stays typed for handwritten annotations"/></a>&nbsp;<a href="https://github.com/nestjs/cache-manager/pull/962"><img src="./assets/card-nestjs.svg" width="32.5%" alt="NestJS cache-manager: Cacheable instances with nonBlocking mode, part of the v3.1.0 release"/></a>&nbsp;<a href="https://github.com/ever-co/ever-gauzy/commits?author=samuelmbabhazi"><img src="./assets/card-gauzy.svg" width="32.5%" alt="Ever Gauzy, maintainer: multi-tenant platform work, APIs, TypeORM data layer, Angular views"/></a>
+  <a href="https://github.com/Automattic/mongoose/pull/16406"><img src="./assets/card-mongoose.svg" width="390" alt="Mongoose: type system fix, Model.schema stays typed for handwritten annotations"/></a>&nbsp;<a href="https://github.com/nestjs/cache-manager/pull/962"><img src="./assets/card-nestjs.svg" width="390" alt="NestJS cache-manager: Cacheable instances with nonBlocking mode, part of the v3.1.0 release"/></a>&nbsp;<a href="https://github.com/ever-co/ever-gauzy/commits?author=samuelmbabhazi"><img src="./assets/card-gauzy.svg" width="390" alt="Ever Gauzy, maintainer: multi-tenant platform work, APIs, TypeORM data layer, Angular views"/></a>
 
   <br/><br/>
 
-  <a href="https://github.com/nestjs/mongoose/pull/2859"><img src="./assets/card-nestmongoose.svg" width="32.5%" alt="nestjs/mongoose: ModelWithSchema type keeping model.schema typed across mongoose 7, 8 and 9, in review"/></a>&nbsp;<a href="https://github.com/ever-co/ever-teams/commits?author=samuelmbabhazi"><img src="./assets/card-teams.svg" width="32.5%" alt="Ever Teams and Traduora, maintainer: real time collaboration features, translation workflow APIs"/></a>&nbsp;<a href="https://commons.wikimedia.org/wiki/User:Samuel_mbabhazi"><img src="./assets/card-wikipedia.svg" width="32.5%" alt="Wikimedia: writing and editing encyclopedia articles, contributing media on Commons"/></a>
+  <a href="https://github.com/nestjs/mongoose/pull/2859"><img src="./assets/card-nestmongoose.svg" width="390" alt="nestjs/mongoose: ModelWithSchema type keeping model.schema typed across mongoose 7, 8 and 9, in review"/></a>&nbsp;<a href="https://github.com/ever-co/ever-teams/commits?author=samuelmbabhazi"><img src="./assets/card-teams.svg" width="390" alt="Ever Teams and Traduora, maintainer: real time collaboration features, translation workflow APIs"/></a>&nbsp;<a href="https://commons.wikimedia.org/wiki/User:Samuel_mbabhazi"><img src="./assets/card-wikipedia.svg" width="390" alt="Wikimedia: writing and editing encyclopedia articles, contributing media on Commons"/></a>
 
 </div>
 
