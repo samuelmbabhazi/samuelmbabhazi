@@ -10,19 +10,13 @@
 
 <div align="center">
 
-  <a href="https://github.com/Automattic/mongoose/pull/16406"><img src="./assets/card-mongoose.svg" width="32.5%" alt="Mongoose: fixed the type regression that turned Model.schema into any, accepted by the maintainer with zero changes requested"/></a>&nbsp;<a href="https://github.com/nestjs/cache-manager/pull/962"><img src="./assets/card-nestjs.svg" width="32.5%" alt="NestJS cache-manager: Cacheable nonBlocking support, shipped to every user in release 3.1.0"/></a>&nbsp;<a href="https://github.com/ever-co/ever-gauzy/commits?author=samuelmbabhazi"><img src="./assets/card-ever.svg" width="32.5%" alt="Ever Platform: maintainer across Gauzy, Teams and Traduora, APIs, UI and platform work"/></a>
+  <a href="https://github.com/Automattic/mongoose/pull/16406"><img src="./assets/card-mongoose.svg" width="32.5%" alt="Mongoose: type system fix, Model.schema stays typed for handwritten annotations"/></a>&nbsp;<a href="https://github.com/nestjs/cache-manager/pull/962"><img src="./assets/card-nestjs.svg" width="32.5%" alt="NestJS cache-manager: Cacheable instances with nonBlocking mode, part of the v3.1.0 release"/></a>&nbsp;<a href="https://github.com/ever-co/ever-gauzy/commits?author=samuelmbabhazi"><img src="./assets/card-gauzy.svg" width="32.5%" alt="Ever Gauzy, maintainer: multi-tenant platform work, APIs, TypeORM data layer, Angular views"/></a>
+
+  <br/><br/>
+
+  <a href="https://github.com/nestjs/mongoose/pull/2859"><img src="./assets/card-nestmongoose.svg" width="32.5%" alt="nestjs/mongoose: ModelWithSchema type keeping model.schema typed across mongoose 7, 8 and 9, in review"/></a>&nbsp;<a href="https://github.com/ever-co/ever-teams/commits?author=samuelmbabhazi"><img src="./assets/card-teams.svg" width="32.5%" alt="Ever Teams and Traduora, maintainer: real time collaboration features, translation workflow APIs"/></a>&nbsp;<a href="https://commons.wikimedia.org/wiki/User:Samuel_mbabhazi"><img src="./assets/card-wikipedia.svg" width="32.5%" alt="Wikimedia: writing and editing encyclopedia articles, contributing media on Commons"/></a>
 
 </div>
-
-<br/>
-
-Every card is clickable and leads to the proof. More in the same ecosystems:
-
-| Project | Contribution |
-|---------|--------------|
-| [**nestjs/mongoose**](https://github.com/nestjs/mongoose/pull/2859) | Root cause analysis of the `Model.schema` typing issue plus a `ModelWithSchema<T>` type, verified against mongoose 7, 8 and 9 · in review |
-| [**Ever Teams**](https://github.com/ever-co/ever-teams) | Service layer improvements, state management and real time collaboration features |
-| [**Ever Traduora**](https://github.com/ever-co/ever-traduora) | REST API and Angular rendering fixes in the translation import and export workflow |
 
 <br/>
 
@@ -52,15 +46,7 @@ Every card is clickable and leads to the proof. More in the same ecosystems:
 
 <div align="center">
 
-  <img height="175em" src="https://github-readme-stats.vercel.app/api?username=samuelmbabhazi&show_icons=true&theme=transparent&hide_border=true&title_color=F4F4F5&text_color=A1A1AA&icon_color=71717A&ring_color=F4F4F5&bg_color=00000000" />
-  <img height="175em" src="https://streak-stats.demolab.com?user=samuelmbabhazi&theme=transparent&hide_border=true&ring=F4F4F5&fire=FFFFFF&currStreakLabel=F4F4F5&sideLabels=A1A1AA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=52525B&background=00000000&stroke=26262B" />
-
-  <br/><br/>
-
-| Achievement | Count | Description |
-|:-----------:|:-----:|-------------|
-| 🤝 **Pair Extraordinaire** | x3 | Consistent collaborative pull request quality |
-| 🦈 **Pull Shark** | x3 | High-volume merged pull requests across codebases |
+  <img src="./assets/stats.svg" width="100%" alt="Contribution activity: 1153 contributions in the past year, 73 pull requests opened, 126 commits on default branches, 40 followers, with the full contribution calendar"/>
 
   <br/>
 
