@@ -1,0 +1,29 @@
+<svg width="390" height="220" viewBox="0 0 390 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7E3BF2"/><stop offset="1" stop-color="#00D4FF"/>
+    </linearGradient>
+    <clipPath id="f"><rect width="390" height="220" rx="16"/></clipPath>
+  </defs>
+  <g clip-path="url(#f)">
+    <rect width="390" height="220" fill="#11151C"/>
+    <rect x="0.5" y="0.5" width="389" height="219" rx="15.5" stroke="#262D38"/>
+    <rect width="390" height="4" fill="url(#a)"/>
+    <ellipse cx="40" cy="0" rx="220" ry="90" fill="#7E3BF2" opacity="0.10"/>
+
+    <text x="28" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" fill="#E6EDF3">NestJS cache-manager</text>
+    <text x="28" y="74" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#8B949E">Official NestJS caching module</text>
+
+    <rect x="292" y="34" width="72" height="26" rx="13" fill="#1A1430" stroke="#7E3BF2" stroke-opacity="0.7"/>
+    <text x="328" y="51" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#A78BFA">SHIPPED</text>
+
+    <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" fill="#C9D1D9">
+      <text x="28" y="112">Added <tspan font-family="Consolas, Menlo, monospace" fill="#00D4FF">Cacheable</tspan> support with</text>
+      <text x="28" y="133"><tspan font-family="Consolas, Menlo, monospace" fill="#00D4FF">nonBlocking</tspan> mode to the provider factory.</text>
+      <text x="28" y="160" fill="#E6EDF3" font-weight="600">Shipped to every user</text>
+      <text x="28" y="180" fill="#E6EDF3" font-weight="600">in release 3.1.0.</text>
+    </g>
+
+    <text x="28" y="205" font-family="Consolas, Menlo, monospace" font-size="12.5" fill="#8B949E">nestjs/cache-manager · PR #962</text>
+  </g>
+</svg>
