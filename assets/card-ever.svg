@@ -1,0 +1,20 @@
+<svg width="390" height="224" viewBox="0 0 390 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="390" height="224" rx="16"/></clipPath>
+<style>@keyframes m { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -1180; } } .r { animation: m 7s linear infinite; }</style></defs>
+<g clip-path="url(#f)">
+<rect width="390" height="224" fill="#0C0C0F"/>
+<ellipse cx="60" cy="0" rx="240" ry="100" fill="#FFFFFF" opacity="0.04"/>
+<circle cx="41" cy="43" r="14" stroke="#F4F4F5" stroke-opacity="0.7" fill="none"/><text x="41" y="48" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#F4F4F5">E</text>
+<text x="66" y="48" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="21" font-weight="800" fill="#F4F4F5">Ever Platform</text>
+<text x="66" y="70" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#71717A">Open business ecosystem</text>
+<rect x="278" y="30" width="112" height="26" rx="13" fill="none" stroke="#F4F4F5" stroke-opacity="0.75"/>
+<text x="334" y="47" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#F4F4F5" letter-spacing="1">MAINTAINER</text>
+<text x="28" y="110" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">Gauzy, Teams and Traduora:</text>
+<text x="28" y="131" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">APIs, UI and platform work.</text>
+<text x="28" y="160" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F4F4F5">Maintaining and shipping across</text>
+<text x="28" y="180" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F4F4F5">a multi-tenant open ecosystem.</text>
+<text x="28" y="206" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="12" fill="#71717A">ever-co · Gauzy · Teams · Traduora</text>
+</g>
+<rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="#26262B" stroke-width="1.5"/>
+<rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="70 1110" class="r"/>
+</svg>
