@@ -11,7 +11,6 @@
       .l3 { animation: rise .5s ease-out both 1.2s; }
       .l4 { animation: rise .5s ease-out both 1.7s; }
       .l5 { animation: rise .5s ease-out both 2.2s; }
-      .l6 { animation: rise .5s ease-out both 2.7s; }
     </style>
   </defs>
   <g clip-path="url(#f)">
@@ -20,14 +19,13 @@
     <rect width="1200" height="46" fill="#101014"/>
     <rect x="0" y="45.5" width="1200" height="1" fill="#26262B"/>
     <circle cx="30" cy="23" r="6" fill="#3F3F46"/>
-    <circle cx="52" cy="23" r="6" fill="#33333A"/>
-    <circle cx="74" cy="23" r="6" fill="#2A2A30"/>
+    <circle cx="52" cy="23" r="6" fill="#26262B"/>
+    <circle cx="74" cy="23" r="6" fill="#26262B"/>
     <text x="600" y="28" text-anchor="middle" class="mono" font-size="13" fill="#71717A">samuel@dev ~ about</text>
-
     <g class="mono" font-size="15.5">
       <g class="l1">
         <text x="36" y="86"><tspan fill="#71717A">$</tspan><tspan fill="#F4F4F5"> whoami</tspan></text>
-        <text x="36" y="110" fill="#A1A1AA">Senior Full-Stack Engineer · 5+ years shipping production-grade applications</text>
+        <text x="36" y="110" fill="#A1A1AA">Full-Stack Developer · 5+ years shipping production-grade applications</text>
       </g>
       <g class="l2">
         <text x="36" y="142"><tspan fill="#71717A">$</tspan><tspan fill="#F4F4F5"> cat focus.txt</tspan></text>
@@ -40,7 +38,7 @@
       </g>
       <g class="l4">
         <text x="36" y="276"><tspan fill="#71717A">$</tspan><tspan fill="#F4F4F5"> git log --author=samuel --oneline </tspan><tspan fill="#71717A">| head -2</tspan></text>
-        <text x="36" y="300" fill="#A1A1AA">types(model): keep Model.schema typed <tspan fill="#F4F4F5">(mongoose, merged)</tspan>  ·  feat: Cacheable nonBlocking <tspan fill="#F4F4F5">(shipped v3.1.0)</tspan></text>
+        <text x="36" y="300" fill="#A1A1AA">types(model): keep Model.schema typed <tspan fill="#F4F4F5">(mongoose, shipped in 9.9.0)</tspan>  ·  feat: Cacheable nonBlocking <tspan fill="#F4F4F5">(shipped v3.1.0)</tspan></text>
       </g>
       <g class="l5">
         <rect x="36" y="308" width="9" height="17" fill="#F4F4F5" class="cur"/>

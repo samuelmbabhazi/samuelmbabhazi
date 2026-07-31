@@ -9,7 +9,7 @@
 <text x="66" y="68" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#71717A">Official NestJS caching module</text>
 <rect x="285.8" y="28" width="82.19999999999999" height="26" rx="13" fill="none" stroke="#F4F4F5" stroke-opacity="0.7"/>
 <text x="326.9" y="45" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#F4F4F5" letter-spacing="1">SHIPPED</text>
-<text x="28" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">Cacheable instances with nonBlocking</text><text x="28" y="129" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">mode in the provider factory.</text><text x="28" y="150" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#E4E4E7">Part of the v3.1.0 release.</text>
+<text x="28" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">Cacheable instances with nonBlocking</text><text x="28" y="129" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#A1A1AA">mode in the provider factory.</text><text x="28" y="150" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#F4F4F5">Part of the v3.1.0 release.</text>
 <text x="28" y="204" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="12" fill="#71717A">nestjs/cache-manager</text>
 </g>
 <rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="#26262B" stroke-width="1.5"/>
