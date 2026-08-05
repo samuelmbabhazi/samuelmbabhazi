@@ -108,7 +108,7 @@ def about(t):
       </g>
       <g class="l4">
         <text x="36" y="276"><tspan fill="{t['textDim']}">$</tspan><tspan fill="{t['text']}"> git log --author=samuel --oneline </tspan><tspan fill="{t['textDim']}">| head -2</tspan></text>
-        <text x="36" y="300" fill="{t['textMuted']}">types(model): keep Model.schema typed <tspan fill="{t['text']}">(mongoose, shipped in 9.9.0)</tspan>  ·  feat: Cacheable nonBlocking <tspan fill="{t['text']}">(shipped v3.1.0)</tspan></text>
+        <text x="36" y="300" fill="{t['textMuted']}">types(document): respect schema toObject options <tspan fill="{t['text']}">(mongoose, merged)</tspan>  ·  types(model): Model.schema typed <tspan fill="{t['text']}">(shipped 9.9.0)</tspan></text>
       </g>
       <g class="l5">
         <rect x="36" y="308" width="9" height="17" fill="{t['text']}" class="cur"/>
@@ -174,59 +174,56 @@ def stack(t):
 
 CARDS = [
     ("card-mongoose.svg", "mongoose", False, "Mongoose", "The MongoDB ODM for Node.js", "SHIPPED",
-     ["Type system fix in the compiled", "declarations: Model.schema stays typed",
-      "for handwritten Model&lt;T&gt; annotations.", "Released in mongoose 9.9.0."], "Automattic/mongoose"),
+     ["Two type system fixes merged:", "Model.schema typing shipped in 9.9.0,", "toObject options typing lands in 9.9.2."], "Automattic/mongoose"),
+    ("card-prisma.svg", "prisma", False, "Prisma", "Next generation TypeScript ORM", "IN REVIEW",
+     ["Rust query compiler fix: nested", "upsert no longer renders cross table", "WHERE clauses on SQL drivers."], "prisma/prisma-engines"),
+    ("card-typeorm.svg", "typeorm", False, "TypeORM", "Data mapper ORM for TypeScript", "IN REVIEW",
+     ["PostGIS fix: dimensional geometry", "types are introspected correctly,", "ending perpetual migration diffs."], "typeorm/typeorm"),
     ("card-nestjs.svg", "nestjs", False, "cache-manager", "Official NestJS caching module", "SHIPPED",
-     ["Cacheable instances with nonBlocking", "mode in the provider factory.",
-      "Part of the v3.1.0 release."], "nestjs/cache-manager"),
-    ("card-gauzy.svg", None, True, "Ever Gauzy", "Open business management platform", "CONTRIBUTOR",
-     ["Multi-tenant platform work:", "APIs, TypeORM data layer,",
-      "Angular views and module boundaries."], "ever-co/ever-gauzy"),
+     ["Cacheable instances with nonBlocking", "mode in the provider factory.", "Part of the v3.1.0 release."], "nestjs/cache-manager"),
     ("card-nestmongoose.svg", "nestjs", False, "nestjs/mongoose", "Official NestJS Mongoose module", "IN REVIEW",
-     ["ModelWithSchema type keeping", "model.schema typed across",
-      "mongoose 7, 8 and 9."], "nestjs/mongoose"),
+     ["ModelWithSchema type keeping", "model.schema typed across", "mongoose 7, 8 and 9."], "nestjs/mongoose"),
+    ("card-gauzy.svg", None, True, "Ever Gauzy", "Open business management platform", "CONTRIBUTOR",
+     ["Multi-tenant platform work:", "APIs, TypeORM data layer,", "Angular views and module boundaries."], "ever-co/ever-gauzy"),
     ("card-teams.svg", None, True, "Ever Teams", "Open work and project management", "CONTRIBUTOR",
-     ["Real time collaboration features,", "service layer improvements",
-      "and state management."], "ever-co/ever-teams"),
+     ["Real time collaboration features,", "service layer improvements", "and state management."], "ever-co/ever-teams"),
     ("card-traduora.svg", None, True, "Ever Traduora", "Translation management platform", "CONTRIBUTOR",
-     ["Translation workflow APIs,", "import and export pipeline,",
-      "Angular rendering fixes."], "ever-co/ever-traduora"),
+     ["Data integrity, import and export", "fixes across the translation", "pipeline and its SQLite layer."], "ever-co/ever-traduora"),
     ("card-wikipedia.svg", "wikipedia", False, "Wikimedia", "Wikipedia &amp; Wikimedia Commons", "CONTRIBUTOR",
-     ["Writing and editing encyclopedia", "articles; contributing and",
-      "curating media on Commons."], "commons.wikimedia.org"),
+     ["Writing and editing encyclopedia", "articles; contributing and", "curating media on Commons."], "commons.wikimedia.org"),
 ]
 
 
 def card(t, ic, use_ever, title, sub, pill, lines, foot):
     if use_ever:
-        head, tx = ever_logo(26, 26, 30), 68
+        head, tx = ever_logo(20, 20, 26), 56
     elif ic:
-        head, tx = icon(ic, 28, 28, 26, t), 66
+        head, tx = icon(ic, 21, 21, 22, t), 54
     else:
-        head, tx = "", 28
-    pw = len(pill) * 8.6 + 22
+        head, tx = "", 20
+    pw = len(pill) * 7.5 + 18
     body = "".join(
-        f'<text x="28" y="{108 + i*21}" font-family="{SANS}" font-size="14.5" '
+        f'<text x="20" y="{92 + i*18}" font-family="{SANS}" font-size="12" '
         f'fill="{t["textMuted"] if i < 2 else t["text"]}">{line}</text>'
         for i, line in enumerate(lines))
-    return f'''<svg width="390" height="224" viewBox="0 0 390 224" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="f"><rect width="390" height="224" rx="16"/></clipPath>
-<style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -1180; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
+    return f"""<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="320" height="200" rx="14"/></clipPath>
+<style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -1040; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
 <g clip-path="url(#f)">
-<rect width="390" height="224" fill="{t['panel']}"/>
-<ellipse cx="60" cy="0" rx="240" ry="100" fill="{t['glow']}" opacity="0.04"/>
+<rect width="320" height="200" fill="{t['panel']}"/>
+<ellipse cx="50" cy="0" rx="200" ry="85" fill="{t['glow']}" opacity="0.04"/>
 {head}
-<text x="{tx}" y="46" font-family="{SANS}" font-size="20" font-weight="800" fill="{t['text']}">{title}</text>
-<text x="{tx}" y="68" font-family="{SANS}" font-size="12.5" fill="{t['textDim']}">{sub}</text>
-<rect x="{386-18-pw}" y="28" width="{pw}" height="26" rx="13" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
-<text x="{386-18-pw/2}" y="45" text-anchor="middle" font-family="{SANS}" font-size="10.5" font-weight="700" fill="{t['text']}" letter-spacing="1">{pill}</text>
+<text x="{tx}" y="38" font-family="{SANS}" font-size="16.5" font-weight="800" fill="{t['text']}">{title}</text>
+<text x="{tx}" y="56" font-family="{SANS}" font-size="10.5" fill="{t['textDim']}">{sub}</text>
+<rect x="{320-14-pw}" y="22" width="{pw}" height="22" rx="11" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
+<text x="{320-14-pw/2}" y="36.5" text-anchor="middle" font-family="{SANS}" font-size="9" font-weight="700" fill="{t['text']}" letter-spacing="0.8">{pill}</text>
 {body}
-<text x="28" y="204" font-family="{MONO}" font-size="12" fill="{t['textDim']}">{foot}</text>
+<text x="20" y="182" font-family="{MONO}" font-size="10.5" fill="{t['textDim']}">{foot}</text>
 </g>
-<rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
-<rect x="1" y="1" width="388" height="222" rx="15" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="70 1110" class="r"/>
+<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
+<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="60 980" class="r"/>
 </svg>
-'''
+"""
 
 
 BUTTONS = [("github", "GitHub", "github"), ("linkedin", "LinkedIn", "linkedin"),

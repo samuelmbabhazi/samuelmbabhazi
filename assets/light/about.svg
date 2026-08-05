@@ -38,7 +38,7 @@
       </g>
       <g class="l4">
         <text x="36" y="276"><tspan fill="#656D76">$</tspan><tspan fill="#1F2328"> git log --author=samuel --oneline </tspan><tspan fill="#656D76">| head -2</tspan></text>
-        <text x="36" y="300" fill="#59636E">types(model): keep Model.schema typed <tspan fill="#1F2328">(mongoose, shipped in 9.9.0)</tspan>  ·  feat: Cacheable nonBlocking <tspan fill="#1F2328">(shipped v3.1.0)</tspan></text>
+        <text x="36" y="300" fill="#59636E">types(document): respect schema toObject options <tspan fill="#1F2328">(mongoose, merged)</tspan>  ·  types(model): Model.schema typed <tspan fill="#1F2328">(shipped 9.9.0)</tspan></text>
       </g>
       <g class="l5">
         <rect x="36" y="308" width="9" height="17" fill="#1F2328" class="cur"/>
