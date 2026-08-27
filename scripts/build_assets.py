@@ -177,8 +177,8 @@ CARDS = [
      ["Two type system fixes merged:", "Model.schema typing shipped in 9.9.0,", "toObject options typing lands in 9.9.2."], "Automattic/mongoose"),
     ("card-prisma.svg", "prisma", False, "Prisma", "Next generation TypeScript ORM", "IN REVIEW",
      ["Rust query compiler fix: nested", "upsert no longer renders cross table", "WHERE clauses on SQL drivers."], "prisma/prisma-engines"),
-    ("card-typeorm.svg", "typeorm", False, "TypeORM", "Data mapper ORM for TypeScript", "IN REVIEW",
-     ["PostGIS fix: dimensional geometry", "types are introspected correctly,", "ending perpetual migration diffs."], "typeorm/typeorm"),
+    ("card-typeorm.svg", "typeorm", False, "TypeORM", "Data mapper ORM for TypeScript", "MERGED",
+     ["PostGIS + CockroachDB dimensional", "geometry types introspected", "correctly, ending perpetual diffs."], "typeorm/typeorm"),
     ("card-nestjs.svg", "nestjs", False, "cache-manager", "Official NestJS caching module", "SHIPPED",
      ["Cacheable instances with nonBlocking", "mode in the provider factory.", "Part of the v3.1.0 release."], "nestjs/cache-manager"),
     ("card-nestmongoose.svg", "nestjs", False, "nestjs/mongoose", "Official NestJS Mongoose module", "UPSTREAMED",
@@ -243,7 +243,7 @@ def button(t, label, slug):
 '''
 
 
-SEPARATORS = [("impact", "01", "Open Source Impact"), ("about", "02", "About Me"),
+SEPARATORS = [("impact", "01", "My Open Source Contributions"), ("about", "02", "About Me"),
               ("stack", "03", "Tech Stack"), ("stats", "04", "GitHub Stats"),
               ("connect", "05", "Let's Connect")]
 
@@ -262,7 +262,7 @@ def separator(t, num, title):
     </style>
   </defs>
   <text x="0" y="42" class="mono" font-size="17" font-weight="700" fill="{t['textFaint']}">{num}</text>
-  <text x="52" y="43" class="sans" font-size="27" font-weight="800" fill="{t['text']}" letter-spacing="-0.5">{title}</text>
+  <text x="52" y="44" class="sans" font-size="30" font-weight="800" fill="{t['text']}" letter-spacing="-0.5">{title}</text>
   <rect x="0" y="59" width="1200" height="1.5" fill="{t['border']}"/>
   <rect x="0" y="58.5" width="220" height="2.5" rx="1" fill="url(#shine)" class="sweep"/>
 </svg>
