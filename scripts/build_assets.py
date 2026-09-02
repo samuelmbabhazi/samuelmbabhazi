@@ -191,6 +191,10 @@ CARDS = [
      ["Data integrity, import and export", "fixes across the translation", "pipeline and its SQLite layer."], "ever-co/ever-traduora"),
     ("card-wikipedia.svg", "wikipedia", False, "Wikimedia", "Wikipedia &amp; Wikimedia Commons", "CONTRIBUTOR",
      ["Writing and editing encyclopedia", "articles; contributing and", "curating media on Commons."], "commons.wikimedia.org"),
+    ("card-firefox.svg", "firefoxbrowser", False, "Firefox DevTools", "Ships in Mozilla Firefox", "MERGED",
+     ["Modern space-separated CSS color", "syntax across the DevTools", "stylesheets and themed icons."], "mozilla-firefox/firefox"),
+    ("card-wikisuite.svg", "gitlab", False, "WikiSuite", "Open server management suite", "MERGED",
+     ["The documented install script now", "works under sh: POSIX root check", "and a clear FQDN error message."], "gitlab.com/wikisuite"),
 ]
 
 

@@ -1,0 +1,17 @@
+<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="320" height="200" rx="14"/></clipPath>
+<style>@keyframes m { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -1040; } } .r { animation: m 7s linear infinite; }</style></defs>
+<g clip-path="url(#f)">
+<rect width="320" height="200" fill="#F6F8FA"/>
+<ellipse cx="50" cy="0" rx="200" ry="85" fill="#1F2328" opacity="0.04"/>
+<g transform="translate(21,21) scale(0.917)"><path d="M8.824 7.287c.008 0 .004 0 0 0zm-2.8-1.4c.006 0 .003 0 0 0zm16.754 2.161c-.505-1.215-1.53-2.528-2.333-2.943.654 1.283 1.033 2.57 1.177 3.53l.002.02c-1.314-3.278-3.544-4.6-5.366-7.477-.091-.147-.184-.292-.273-.446a3.545 3.545 0 01-.13-.24 2.118 2.118 0 01-.172-.46.03.03 0 00-.027-.03.038.038 0 00-.021 0l-.006.001a.037.037 0 00-.01.005L15.624 0c-2.585 1.515-3.657 4.168-3.932 5.856a6.197 6.197 0 00-2.305.587.297.297 0 00-.147.37c.057.162.24.24.396.17a5.622 5.622 0 012.008-.523l.067-.005a5.847 5.847 0 011.957.222l.095.03a5.816 5.816 0 01.616.228c.08.036.16.073.238.112l.107.055a5.835 5.835 0 01.368.211 5.953 5.953 0 012.034 2.104c-.62-.437-1.733-.868-2.803-.681 4.183 2.09 3.06 9.292-2.737 9.02a5.164 5.164 0 01-1.513-.292 4.42 4.42 0 01-.538-.232c-1.42-.735-2.593-2.121-2.74-3.806 0 0 .537-2 3.845-2 .357 0 1.38-.998 1.398-1.287-.005-.095-2.029-.9-2.817-1.677-.422-.416-.622-.616-.8-.767a3.47 3.47 0 00-.301-.227 5.388 5.388 0 01-.032-2.842c-1.195.544-2.124 1.403-2.8 2.163h-.006c-.46-.584-.428-2.51-.402-2.913-.006-.025-.343.176-.389.206-.406.29-.787.616-1.136.974-.397.403-.76.839-1.085 1.303a9.816 9.816 0 00-1.562 3.52c-.003.013-.11.487-.19 1.073-.013.09-.026.181-.037.272a7.8 7.8 0 00-.069.667l-.002.034-.023.387-.001.06C.386 18.795 5.593 24 12.016 24c5.752 0 10.527-4.176 11.463-9.661.02-.149.035-.298.052-.448.232-1.994-.025-4.09-.753-5.844z" fill="#FF7139"/></g>
+<text x="54" y="38" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="800" fill="#1F2328">Firefox DevTools</text>
+<text x="54" y="56" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#656D76">Ships in Mozilla Firefox</text>
+<rect x="243.0" y="22" width="63.0" height="22" rx="11" fill="none" stroke="#1F2328" stroke-opacity="0.7"/>
+<text x="274.5" y="36.5" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#1F2328" letter-spacing="0.8">MERGED</text>
+<text x="20" y="92" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#59636E">Modern space-separated CSS color</text><text x="20" y="110" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#59636E">syntax across the DevTools</text><text x="20" y="128" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#1F2328">stylesheets and themed icons.</text>
+<text x="20" y="182" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="10.5" fill="#656D76">mozilla-firefox/firefox</text>
+</g>
+<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="#D1D9E0" stroke-width="1.5"/>
+<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="#1F2328" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="60 980" class="r"/>
+</svg>

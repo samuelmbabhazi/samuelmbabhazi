@@ -70,6 +70,7 @@ BRAND = {
     "mongoose": "#B0413E", "upwork": "#6FDA44", "linkedin": "#0A66C2",
     "gmail": "#EA4335", "devdotto": "#FFFFFF", "github": "#FFFFFF",
     "googlechrome": "#4285F4", "wikipedia": "#FFFFFF",
+    "firefoxbrowser": "#FF7139", "gitlab": "#FC6D26",
 }
 
 
