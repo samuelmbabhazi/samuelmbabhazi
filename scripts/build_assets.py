@@ -195,37 +195,40 @@ CARDS = [
      ["Modern space-separated CSS color", "syntax across the DevTools", "stylesheets and themed icons."], "mozilla-firefox/firefox"),
     ("card-wikisuite.svg", "gitlab", False, "WikiSuite", "Open server management suite", "MERGED",
      ["The documented install script now", "works under sh: POSIX root check", "and a clear FQDN error message."], "gitlab.com/wikisuite"),
+    ("card-wordpress.svg", "wordpress", False, "WordPress", "SQLite driver for WordPress", "MERGED",
+     ["SHOW CREATE TABLE keeps index", "prefix lengths and DESC order", "on the SQLite driver."], "WordPress/sqlite-database-integration"),
 ]
 
 
 def card(t, ic, use_ever, title, sub, pill, lines, foot):
     if use_ever:
-        head, tx = ever_logo(20, 20, 26), 56
-    elif ic:
-        head, tx = icon(ic, 21, 21, 22, t), 54
+        head, tx = ever_logo(14, 13, 20), 42
     else:
-        head, tx = "", 20
-    pw = len(pill) * 7.5 + 18
+        # icon() returns an empty string for a slug the registry does not carry,
+        # so the title reclaims the space instead of leaving a gap.
+        head = icon(ic, 14, 13, 20, t) if ic else ""
+        tx = 42 if head else 14
+    pw = len(pill) * 6 + 14
     body = "".join(
-        f'<text x="20" y="{92 + i*18}" font-family="{SANS}" font-size="12" '
+        f'<text x="14" y="{76 + i*15}" font-family="{SANS}" font-size="10.5" '
         f'fill="{t["textMuted"] if i < 2 else t["text"]}">{line}</text>'
         for i, line in enumerate(lines))
-    return f"""<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="f"><rect width="320" height="200" rx="14"/></clipPath>
-<style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -1040; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
+    return f"""<svg width="260" height="150" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath>
+<style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -800; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
 <g clip-path="url(#f)">
-<rect width="320" height="200" fill="{t['panel']}"/>
-<ellipse cx="50" cy="0" rx="200" ry="85" fill="{t['glow']}" opacity="0.04"/>
+<rect width="260" height="150" fill="{t['panel']}"/>
+<ellipse cx="40" cy="0" rx="160" ry="66" fill="{t['glow']}" opacity="0.04"/>
 {head}
-<text x="{tx}" y="38" font-family="{SANS}" font-size="16.5" font-weight="800" fill="{t['text']}">{title}</text>
-<text x="{tx}" y="56" font-family="{SANS}" font-size="10.5" fill="{t['textDim']}">{sub}</text>
-<rect x="{320-14-pw}" y="22" width="{pw}" height="22" rx="11" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
-<text x="{320-14-pw/2}" y="36.5" text-anchor="middle" font-family="{SANS}" font-size="9" font-weight="700" fill="{t['text']}" letter-spacing="0.8">{pill}</text>
+<text x="{tx}" y="30" font-family="{SANS}" font-size="15" font-weight="800" fill="{t['text']}">{title}</text>
+<text x="{tx}" y="45" font-family="{SANS}" font-size="9.5" fill="{t['textDim']}">{sub}</text>
+<rect x="{260-12-pw}" y="17" width="{pw}" height="19" rx="9.5" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
+<text x="{260-12-pw/2}" y="30" text-anchor="middle" font-family="{SANS}" font-size="8.5" font-weight="700" fill="{t['text']}" letter-spacing="0.6">{pill}</text>
 {body}
-<text x="20" y="182" font-family="{MONO}" font-size="10.5" fill="{t['textDim']}">{foot}</text>
+<text x="14" y="134" font-family="{MONO}" font-size="9.5" fill="{t['textDim']}">{foot}</text>
 </g>
-<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
-<rect x="1" y="1" width="318" height="198" rx="13" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="60 980" class="r"/>
+<rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
+<rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="50 750" class="r"/>
 </svg>
 """
 
