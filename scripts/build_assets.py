@@ -225,8 +225,7 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
         f'fill="{t["textMuted"] if i < 2 else t["text"]}">{line}</text>'
         for i, line in enumerate(lines))
     return f"""<svg width="{w}" height="{h}" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath>
-<style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -800; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
+<defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath></defs>
 <g clip-path="url(#f)">
 <rect width="260" height="150" fill="{t['panel']}"/>
 <ellipse cx="40" cy="0" rx="160" ry="66" fill="{t['glow']}" opacity="0.04"/>
@@ -239,7 +238,6 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
 <text x="14" y="134" font-family="{MONO}" font-size="9.5" fill="{t['textDim']}">{foot}</text>
 </g>
 <rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
-<rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="50 750" class="r"/>
 </svg>
 """
 

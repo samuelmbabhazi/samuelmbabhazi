@@ -1,6 +1,5 @@
 <svg width="198" height="114" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath>
-<style>@keyframes m { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -800; } } .r { animation: m 7s linear infinite; }</style></defs>
+<defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath></defs>
 <g clip-path="url(#f)">
 <rect width="260" height="150" fill="#0C0C0F"/>
 <ellipse cx="40" cy="0" rx="160" ry="66" fill="#FFFFFF" opacity="0.04"/>
@@ -13,5 +12,4 @@
 <text x="14" y="134" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="9.5" fill="#71717A">Automattic/mongoose</text>
 </g>
 <rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="#26262B" stroke-width="1.5"/>
-<rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="50 750" class="r"/>
 </svg>
