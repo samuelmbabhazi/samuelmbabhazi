@@ -236,6 +236,9 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
 <text x="{260-12-pw/2}" y="30" text-anchor="middle" font-family="{SANS}" font-size="8.5" font-weight="700" fill="{t['text']}" letter-spacing="0.6">{pill}</text>
 {body}
 <text x="14" y="134" font-family="{MONO}" font-size="9.5" fill="{t['textDim']}">{foot}</text>
+<g transform="translate(233,124)" stroke="{t['textMuted']}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M1.5 10.5 10.5 1.5"/><path d="M3.5 1.5h7v7"/>
+</g>
 </g>
 <rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
 </svg>
