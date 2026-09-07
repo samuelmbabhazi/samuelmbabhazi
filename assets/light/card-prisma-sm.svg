@@ -1,0 +1,12 @@
+<svg width="134" height="60" viewBox="0 0 134 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="134" height="60" rx="10"/></clipPath></defs>
+<g clip-path="url(#f)">
+<rect width="134" height="60" fill="#F6F8FA"/>
+<ellipse cx="24" cy="0" rx="90" ry="34" fill="#1F2328" opacity="0.04"/>
+<g transform="translate(10,10) scale(0.667)"><path d="M21.8068 18.2848L13.5528.7565c-.207-.4382-.639-.7273-1.1286-.7541-.5023-.0293-.9523.213-1.2062.6253L2.266 15.1271c-.2773.4518-.2718 1.0091.0158 1.4555l4.3759 6.7786c.2608.4046.7127.6388 1.1823.6388.1332 0 .267-.0188.3987-.0577l12.7019-3.7568c.3891-.1151.7072-.3904.8737-.7553s.1633-.7828-.0075-1.1454zm-1.8481.7519L9.1814 22.2242c-.3292.0975-.6448-.1873-.5756-.5194l3.8501-18.4386c.072-.3448.5486-.3996.699-.0803l7.1288 15.138c.1344.2856-.019.6224-.325.7128z" fill="#5A67D8"/></g>
+<text x="32" y="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#1F2328">Prisma</text>
+<rect x="10" y="34" width="50.5" height="15" rx="7.5" fill="none" stroke="#1F2328" stroke-opacity="0.7"/>
+<text x="35.25" y="44.5" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" font-weight="700" fill="#1F2328" letter-spacing="0.5">IN REVIEW</text>
+</g>
+<rect x="0.75" y="0.75" width="132.5" height="58.5" rx="9.25" fill="none" stroke="#D1D9E0" stroke-width="1.5"/>
+</svg>

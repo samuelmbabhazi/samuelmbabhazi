@@ -213,7 +213,7 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot):
         f'<text x="14" y="{76 + i*15}" font-family="{SANS}" font-size="10.5" '
         f'fill="{t["textMuted"] if i < 2 else t["text"]}">{line}</text>'
         for i, line in enumerate(lines))
-    return f"""<svg width="260" height="150" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return f"""<svg width="198" height="114" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs><clipPath id="f"><rect width="260" height="150" rx="12"/></clipPath>
 <style>@keyframes m {{ from {{ stroke-dashoffset: 0; }} to {{ stroke-dashoffset: -800; }} }} .r {{ animation: m 7s linear infinite; }}</style></defs>
 <g clip-path="url(#f)">
@@ -229,6 +229,32 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot):
 </g>
 <rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
 <rect x="1" y="1" width="258" height="148" rx="11" fill="none" stroke="{t['glow']}" stroke-width="1.5" stroke-opacity="0.85" stroke-dasharray="50 750" class="r"/>
+</svg>
+"""
+
+
+def card_small(t, ic, use_ever, title, sub, pill, lines, foot):
+    """Phone-sized chip. GitHub gives a README barely 280px wide on a phone, so
+    two full cards there would leave the body text unreadable. The chip keeps
+    the project, its logo and the status, and drops the prose the wide card
+    carries; both link to the same page."""
+    if use_ever:
+        head, tx = ever_logo(10, 10, 16), 32
+    else:
+        head = icon(ic, 10, 10, 16, t) if ic else ""
+        tx = 32 if head else 10
+    pw = len(pill) * 4.5 + 10
+    return f"""<svg width="134" height="60" viewBox="0 0 134 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="f"><rect width="134" height="60" rx="10"/></clipPath></defs>
+<g clip-path="url(#f)">
+<rect width="134" height="60" fill="{t['panel']}"/>
+<ellipse cx="24" cy="0" rx="90" ry="34" fill="{t['glow']}" opacity="0.04"/>
+{head}
+<text x="{tx}" y="22" font-family="{SANS}" font-size="10" font-weight="800" fill="{t['text']}">{title}</text>
+<rect x="10" y="34" width="{pw}" height="15" rx="7.5" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
+<text x="{10 + pw/2}" y="44.5" text-anchor="middle" font-family="{SANS}" font-size="6.5" font-weight="700" fill="{t['text']}" letter-spacing="0.5">{pill}</text>
+</g>
+<rect x="0.75" y="0.75" width="132.5" height="58.5" rx="9.25" fill="none" stroke="{t['border']}" stroke-width="1.5"/>
 </svg>
 """
 
@@ -315,7 +341,9 @@ def main():
         count += 4
         for fname, ic, ever, title, sub, pill, lines, foot in CARDS:
             write(fname, name, card(t, ic, ever, title, sub, pill, lines, foot))
-            count += 1
+            write(fname.replace(".svg", "-sm.svg"), name,
+                  card_small(t, ic, ever, title, sub, pill, lines, foot))
+            count += 2
         for slug_name, label, slug in BUTTONS:
             write(f"btn-{slug_name}.svg", name, button(t, label, slug))
             count += 1
