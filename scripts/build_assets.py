@@ -179,7 +179,7 @@ CARDS = [
      ["Rust query compiler fix: nested", "upsert no longer renders cross table", "WHERE clauses on SQL drivers."], "prisma/prisma-engines"),
     ("card-typeorm.svg", "typeorm", False, "TypeORM", "Data mapper ORM for TypeScript", "MERGED",
      ["PostGIS + CockroachDB dimensional", "geometry types introspected", "correctly, ending perpetual diffs."], "typeorm/typeorm"),
-    ("card-nestjs.svg", "nestjs", False, "cache-manager", "Official NestJS caching module", "SHIPPED",
+    ("card-nestjs.svg", "nestjs", False, "nestjs/cache-manager", "Official NestJS caching module", "SHIPPED",
      ["Cacheable instances with nonBlocking", "mode in the provider factory.", "Part of the v3.1.0 release."], "nestjs/cache-manager"),
     ("card-nestmongoose.svg", "nestjs", False, "nestjs/mongoose", "Official NestJS Mongoose module", "UPSTREAMED",
      ["ModelWithSchema proposal for typed", "model.schema, resolved instead by", "my upstream mongoose 9.9.0 fix."], "nestjs/mongoose"),
@@ -200,17 +200,26 @@ CARDS = [
 ]
 
 
+# Rendered width of each status label, measured in a browser with the widest
+# fallback of the font stack, so the pill never crops its own text and the
+# longest title still clears it.
+PILL_TEXT_WIDTH = {
+    "MERGED": 41, "SHIPPED": 42, "IN REVIEW": 51, "UPSTREAMED": 66,
+    "CONTRIBUTOR": 70,
+}
+
+
 def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
     """One drawing, two sizes. The viewBox stays 260x150 so the phone card is
     the wide card scaled down, never a different layout."""
     if use_ever:
-        head, tx = ever_logo(14, 13, 20), 42
+        head, tx = ever_logo(14, 13, 20), 38
     else:
         # icon() returns an empty string for a slug the registry does not carry,
         # so the title reclaims the space instead of leaving a gap.
         head = icon(ic, 14, 13, 20, t) if ic else ""
-        tx = 42 if head else 14
-    pw = len(pill) * 6 + 14
+        tx = 38 if head else 14
+    pw = PILL_TEXT_WIDTH[pill] + 14
     body = "".join(
         f'<text x="14" y="{76 + i*15}" font-family="{SANS}" font-size="10.5" '
         f'fill="{t["textMuted"] if i < 2 else t["text"]}">{line}</text>'
@@ -222,7 +231,7 @@ def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
 <rect width="260" height="150" fill="{t['panel']}"/>
 <ellipse cx="40" cy="0" rx="160" ry="66" fill="{t['glow']}" opacity="0.04"/>
 {head}
-<text x="{tx}" y="30" font-family="{SANS}" font-size="15" font-weight="800" fill="{t['text']}">{title}</text>
+<text x="{tx}" y="30" font-family="{SANS}" font-size="13.5" font-weight="800" fill="{t['text']}">{title}</text>
 <text x="{tx}" y="45" font-family="{SANS}" font-size="9.5" fill="{t['textDim']}">{sub}</text>
 <rect x="{260-12-pw}" y="17" width="{pw}" height="19" rx="9.5" fill="none" stroke="{t['text']}" stroke-opacity="0.7"/>
 <text x="{260-12-pw/2}" y="30" text-anchor="middle" font-family="{SANS}" font-size="8.5" font-weight="700" fill="{t['text']}" letter-spacing="0.6">{pill}</text>

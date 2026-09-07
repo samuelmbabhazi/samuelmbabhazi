@@ -5,10 +5,10 @@
 <rect width="260" height="150" fill="#0C0C0F"/>
 <ellipse cx="40" cy="0" rx="160" ry="66" fill="#FFFFFF" opacity="0.04"/>
 <g transform="translate(14,13) scale(0.833)"><path d="M21.8068 18.2848L13.5528.7565c-.207-.4382-.639-.7273-1.1286-.7541-.5023-.0293-.9523.213-1.2062.6253L2.266 15.1271c-.2773.4518-.2718 1.0091.0158 1.4555l4.3759 6.7786c.2608.4046.7127.6388 1.1823.6388.1332 0 .267-.0188.3987-.0577l12.7019-3.7568c.3891-.1151.7072-.3904.8737-.7553s.1633-.7828-.0075-1.1454zm-1.8481.7519L9.1814 22.2242c-.3292.0975-.6448-.1873-.5756-.5194l3.8501-18.4386c.072-.3448.5486-.3996.699-.0803l7.1288 15.138c.1344.2856-.019.6224-.325.7128z" fill="#5A67D8"/></g>
-<text x="42" y="30" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="800" fill="#F4F4F5">Prisma</text>
-<text x="42" y="45" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#71717A">Next generation TypeScript ORM</text>
-<rect x="180" y="17" width="68" height="19" rx="9.5" fill="none" stroke="#F4F4F5" stroke-opacity="0.7"/>
-<text x="214.0" y="30" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#F4F4F5" letter-spacing="0.6">IN REVIEW</text>
+<text x="38" y="30" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#F4F4F5">Prisma</text>
+<text x="38" y="45" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#71717A">Next generation TypeScript ORM</text>
+<rect x="183" y="17" width="65" height="19" rx="9.5" fill="none" stroke="#F4F4F5" stroke-opacity="0.7"/>
+<text x="215.5" y="30" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#F4F4F5" letter-spacing="0.6">IN REVIEW</text>
 <text x="14" y="76" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#A1A1AA">Rust query compiler fix: nested</text><text x="14" y="91" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#A1A1AA">upsert no longer renders cross table</text><text x="14" y="106" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#F4F4F5">WHERE clauses on SQL drivers.</text>
 <text x="14" y="134" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="9.5" fill="#71717A">prisma/prisma-engines</text>
 </g>
