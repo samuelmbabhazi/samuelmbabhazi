@@ -172,6 +172,105 @@ def stack(t):
             + "".join(body) + '</g></svg>\n')
 
 
+PRINCIPLES = [
+    ("I stay the author.",
+     ["Every line is read, understood and explainable before I ask anyone to review it.",
+      "The commit carries my name because the judgement in it is mine."]),
+    ("Proof before fix.",
+     ["I reproduce the bug and make the new tests fail on the original code first,",
+      "then fix, then run the whole suite. A green run on a guess is not a fix."]),
+    ("Disclosed, always.",
+     ["Pull requests say where AI helped, following each project's rules: Automattic's",
+      "PR template, Harper's agent policy, the Firefox AI coding policy."]),
+    ("Nothing confidential in a prompt.",
+     ["Client code, credentials and private data never leave the machine.",
+      "External tools only see what is already public or mine to share."]),
+]
+
+HELPS = ["tracing a crash through code I have never read",
+         "drafting test fixtures and hunting edge cases",
+         "scanning issue trackers for verified, unclaimed bugs",
+         "first drafts of docs, later rewritten in my words"]
+
+DOESNT = ["decide what ships", "sign the commit",
+          "replace running the code", "talk to a maintainer for me"]
+
+
+def ai(t):
+    body = []
+    y = 96
+    for i, (title, lines) in enumerate(PRINCIPLES, 1):
+        body.append(f'<g class="l{i}">')
+        body.append(f'<text x="36" y="{y}" class="mono" font-size="13" font-weight="700" '
+                    f'fill="{t["textFaint"]}" letter-spacing="1.5">0{i}</text>')
+        body.append(f'<text x="70" y="{y}" class="sans" font-size="17.5" font-weight="700" '
+                    f'fill="{t["text"]}">{title}</text>')
+        for j, line in enumerate(lines):
+            body.append(f'<text x="70" y="{y + 24 + j * 20}" class="sans" font-size="14" '
+                        f'fill="{t["textMuted"]}">{line}</text>')
+        body.append('</g>')
+        y += 84
+
+    def ledger(x, y, w, h, label, items, marker, cls):
+        out = [f'<g class="{cls}">',
+               f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="{t["chip"]}" stroke="{t["border"]}"/>',
+               f'<text x="{x+22}" y="{y+30}" class="mono" font-size="12" font-weight="700" '
+               f'fill="{t["textDim"]}" letter-spacing="2">{label}</text>']
+        for k, item in enumerate(items):
+            yy = y + 58 + k * 24
+            out.append(f'<text x="{x+22}" y="{yy}" class="mono" font-size="13.5" fill="{t["textFaint"]}">{marker}</text>')
+            out.append(f'<text x="{x+44}" y="{yy}" class="sans" font-size="14" fill="{t["textSoft"]}">{item}</text>')
+        out.append('</g>')
+        return "".join(out)
+
+    body.append(ledger(742, 70, 422, 166, "WHERE IT HELPS", HELPS, "+", "l2"))
+    body.append(ledger(742, 252, 422, 166, "WHERE IT DOES NOT", DOESNT, "-", "l3"))
+    body.append(
+        f'<g class="l5">'
+        f'<rect x="36" y="436" width="1128" height="1" fill="{t["border"]}"/>'
+        f'<text x="36" y="466" class="mono" font-size="13" fill="{t["textDim"]}">'
+        f'<tspan fill="{t["textFaint"]}">$</tspan> tools  <tspan fill="{t["text"]}">Claude Code</tspan> · '
+        f'<tspan fill="{t["text"]}">Codex</tspan>, in the terminal, next to the tests and the linter</text>'
+        f'<text x="36" y="490" class="mono" font-size="13" fill="{t["textDim"]}">'
+        f'<tspan fill="{t["textFaint"]}">$</tspan> seen in practice  Automattic/studio #4797 · '
+        f'WordPress/sqlite-database-integration #500 · Firefox bug 2054228</text>'
+        f'</g>')
+    h = 512
+    head = (
+        f'<svg width="1200" height="{h}" viewBox="0 0 1200 {h}" fill="none" xmlns="http://www.w3.org/2000/svg">\n'
+        f'  <defs>\n'
+        f'    <clipPath id="f"><rect width="1200" height="{h}" rx="18"/></clipPath>\n'
+        f'    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">\n'
+        f'      <stop offset="0" stop-color="{t["glow"]}" stop-opacity="0"/><stop offset="0.5" stop-color="{t["glow"]}" stop-opacity="0.8"/><stop offset="1" stop-color="{t["glow"]}" stop-opacity="0"/>\n'
+        f'    </linearGradient>\n'
+        f'    <style>\n'
+        f'      .sans {{ font-family: {SANS}; }}\n'
+        f'      .mono {{ font-family: {MONO}; }}\n'
+        f'      @keyframes rise {{ from {{opacity:0; transform: translateY(6px);}} to {{opacity:1; transform: translateY(0);}} }}\n'
+        f'      .l1 {{ animation: rise .5s ease-out both .2s; }}\n'
+        f'      .l2 {{ animation: rise .5s ease-out both .6s; }}\n'
+        f'      .l3 {{ animation: rise .5s ease-out both 1s; }}\n'
+        f'      .l4 {{ animation: rise .5s ease-out both 1.4s; }}\n'
+        f'      .l5 {{ animation: rise .5s ease-out both 1.8s; }}\n'
+        f'      @keyframes sweep {{ 0% {{ transform: translateX(-260px);}} 100% {{ transform: translateX(1300px);}} }}\n'
+        f'      .sweep {{ animation: sweep 9s ease-in-out infinite 2s; }}\n'
+        f'    </style>\n'
+        f'  </defs>\n'
+        f'  <g clip-path="url(#f)">\n'
+        f'    <rect width="1200" height="{h}" fill="{t["panel"]}"/>\n'
+        f'    <rect x="0.5" y="0.5" width="1199" height="{h-1}" rx="17.5" stroke="{t["border"]}"/>\n'
+        f'    <rect width="1200" height="46" fill="{t["panelHead"]}"/>\n'
+        f'    <rect x="0" y="45.5" width="1200" height="1" fill="{t["border"]}"/>\n'
+        f'    <rect x="0" y="45" width="220" height="2" rx="1" fill="url(#shine)" class="sweep"/>\n'
+        f'    <circle cx="30" cy="23" r="6" fill="{t["borderStrong"]}"/>\n'
+        f'    <circle cx="52" cy="23" r="6" fill="{t["border"]}"/>\n'
+        f'    <circle cx="74" cy="23" r="6" fill="{t["border"]}"/>\n'
+        f'    <text x="600" y="28" text-anchor="middle" class="mono" font-size="13" fill="{t["textDim"]}">samuel@dev ~ ai-policy</text>\n'
+        f'    <text x="1164" y="28" text-anchor="end" class="mono" font-size="12" font-weight="700" fill="{t["textFaint"]}" letter-spacing="1.5">ASSISTANT, NOT AUTHOR</text>\n'
+    )
+    return head + "    " + "".join(body) + "\n  </g>\n</svg>\n"
+
+
 CARDS = [
     ("card-mongoose.svg", "mongoose", False, "Mongoose", "The MongoDB ODM for Node.js", "SHIPPED",
      ["Two type system fixes merged:", "Model.schema typing shipped in 9.9.0,", "toObject options typing lands in 9.9.2."], "Automattic/mongoose"),
@@ -263,8 +362,8 @@ def button(t, label, slug):
 
 
 SEPARATORS = [("impact", "01", "My Open Source Contributions"), ("about", "02", "About Me"),
-              ("stack", "03", "Tech Stack"), ("stats", "04", "GitHub Stats"),
-              ("connect", "05", "Let's Connect")]
+              ("ai", "03", "How I Work With AI"), ("stack", "04", "Tech Stack"),
+              ("stats", "05", "GitHub Stats"), ("connect", "06", "Let's Connect")]
 
 
 def separator(t, num, title):
@@ -322,9 +421,10 @@ def main():
     for name, t in THEMES.items():
         write("hero.svg", name, hero(t))
         write("about.svg", name, about(t))
+        write("ai.svg", name, ai(t))
         write("stack.svg", name, stack(t))
         write("footer.svg", name, footer(t))
-        count += 4
+        count += 5
         for fname, ic, ever, title, sub, pill, lines, foot in CARDS:
             write(fname, name, card(t, ic, ever, title, sub, pill, lines, foot))
             write(fname.replace(".svg", "-sm.svg"), name,

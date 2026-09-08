@@ -26,7 +26,17 @@
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-stack.svg"><img src="./assets/light/sep-stack.svg" width="100%" alt="03 · Tech Stack"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-ai.svg"><img src="./assets/light/sep-ai.svg" width="100%" alt="03 · How I Work With AI"/></picture>
+
+<br/>
+
+<div align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/ai.svg"><img src="./assets/light/ai.svg" width="100%" alt="How I work with AI. Assistant, not author. 01 I stay the author: every line is read, understood and explainable before I ask anyone to review it; the commit carries my name because the judgement in it is mine. 02 Proof before fix: I reproduce the bug and make the new tests fail on the original code first, then fix, then run the whole suite. 03 Disclosed, always: pull requests say where AI helped, following each project's rules, Automattic's PR template, Harper's agent policy, the Firefox AI coding policy. 04 Nothing confidential in a prompt: client code, credentials and private data never leave the machine. Where it helps: tracing a crash through unfamiliar code, drafting test fixtures and hunting edge cases, scanning issue trackers for verified unclaimed bugs, first drafts of docs later rewritten in my words. Where it does not: decide what ships, sign the commit, replace running the code, talk to a maintainer for me. Tools: Claude Code and Codex, in the terminal, next to the tests and the linter. Seen in practice: Automattic/studio pull request 4797, WordPress/sqlite-database-integration pull request 500, Firefox bug 2054228."/></picture>
+</div>
+
+<br/>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-stack.svg"><img src="./assets/light/sep-stack.svg" width="100%" alt="04 · Tech Stack"/></picture>
 
 <br/>
 
@@ -36,7 +46,7 @@
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-stats.svg"><img src="./assets/light/sep-stats.svg" width="100%" alt="04 · GitHub Stats"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-stats.svg"><img src="./assets/light/sep-stats.svg" width="100%" alt="05 · GitHub Stats"/></picture>
 
 <br/>
 
@@ -52,7 +62,7 @@
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-connect.svg"><img src="./assets/light/sep-connect.svg" width="100%" alt="05 · Let's Connect"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/sep-connect.svg"><img src="./assets/light/sep-connect.svg" width="100%" alt="06 · Let's Connect"/></picture>
 
 <br/>
 
