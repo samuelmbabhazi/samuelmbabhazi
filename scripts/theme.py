@@ -54,6 +54,7 @@ THEMES = {
 _DATA = json.load(open(os.path.join(os.path.dirname(__file__), "icons.json")))
 ICONS = _DATA["icons"]
 EVER_LOGO = _DATA["everLogo"]
+OSK_LOGO = _DATA["oskLogo"]
 
 BRAND = {
     "typescript": "#3178C6", "javascript": "#F7DF1E", "python": "#3776AB",
@@ -70,7 +71,7 @@ BRAND = {
     "mongoose": "#B0413E", "upwork": "#6FDA44", "linkedin": "#0A66C2",
     "gmail": "#EA4335", "devdotto": "#FFFFFF", "github": "#FFFFFF",
     "googlechrome": "#4285F4", "wikipedia": "#FFFFFF",
-    "firefoxbrowser": "#FF7139", "gitlab": "#FC6D26", "wordpress": "#21759B",
+    "firefoxbrowser": "#FF7139", "gitlab": "#FC6D26", "wordpress": "#21759B", "creativecommons": "#EF9421",
 }
 
 
@@ -85,6 +86,11 @@ def icon(slug, x, y, size, t):
     scale = size / 24
     return (f'<g transform="translate({x},{y}) scale({scale:.3f})">'
             f'<path d="{ICONS[slug]}" fill="{fill}"/></g>')
+
+
+def osk_logo(x, y, size):
+    return (f'<image x="{x}" y="{y}" width="{size}" height="{size}" '
+            f'href="data:image/png;base64,{OSK_LOGO}"/>')
 
 
 def ever_logo(x, y, size):

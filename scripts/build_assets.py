@@ -5,7 +5,7 @@ Run: python3 scripts/build_assets.py
 Output: assets/dark/*.svg and assets/light/*.svg
 """
 
-from theme import THEMES, SANS, MONO, ICONS, icon, ever_logo, write
+from theme import THEMES, SANS, MONO, ICONS, icon, ever_logo, osk_logo, write
 
 
 def hero(t):
@@ -296,6 +296,14 @@ CARDS = [
      ["The documented install script now", "works under sh: POSIX root check", "and a clear FQDN error message."], "gitlab.com/wikisuite"),
     ("card-wordpress.svg", "wordpress", False, "WordPress", "SQLite driver for WordPress", "MERGED",
      ["SHOW CREATE TABLE keeps index", "prefix lengths and DESC order", "on the SQLite driver."], "WordPress/sqlite-database-integration"),
+    ("card-studio.svg", "wordpress", False, "WordPress Studio", "Automattic local development app", "MERGED",
+     [".wpress backups holding files", "over 2 GiB import again", "instead of crashing Studio."], "Automattic/studio"),
+    ("card-creativecommons.svg", "creativecommons", False, "Creative Commons", "Vocabulary design system", "MERGED",
+     ["Two broken asset paths fixed:", "the default header photo and", "license icons render again."], "creativecommons/vocabulary"),
+    ("card-wikiedu.svg", "wikipedia", False, "Wiki Education", "Wikipedia education dashboard", "MERGED",
+     ["Article Finder suggestions", "render as a list again,", "clickable instead of stacked."], "WikiEducationFoundation/WikiEduDashboard"),
+    ("card-docksight.svg", None, "osk", "DockSight", "Open Source Kigali containers", "MERGED",
+     ["Agent, protocol and dashboard", "now share one container.listed", "shape, validated by the server."], "Open-Source-Kigali/docksight"),
 ]
 
 
@@ -311,7 +319,9 @@ PILL_TEXT_WIDTH = {
 def card(t, ic, use_ever, title, sub, pill, lines, foot, w=198, h=114):
     """One drawing, two sizes. The viewBox stays 260x150 so the phone card is
     the wide card scaled down, never a different layout."""
-    if use_ever:
+    if use_ever == "osk":
+        head, tx = osk_logo(14, 13, 20), 38
+    elif use_ever:
         head, tx = ever_logo(14, 13, 20), 38
     else:
         # icon() returns an empty string for a slug the registry does not carry,
