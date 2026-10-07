@@ -277,7 +277,7 @@ CARDS = [
     ("card-prisma.svg", "prisma", False, "Prisma", "Next generation TypeScript ORM", "IN REVIEW",
      ["Rust query compiler fix: nested", "upsert no longer renders cross table", "WHERE clauses on SQL drivers."], "prisma/prisma-engines"),
     ("card-typeorm.svg", "typeorm", False, "TypeORM", "Data mapper ORM for TypeScript", "MERGED",
-     ["PostGIS + CockroachDB dimensional", "geometry types introspected", "correctly, ending perpetual diffs."], "typeorm/typeorm"),
+     ["Two schema fixes for PostGIS and", "CockroachDB spatial columns, ending", "perpetual migration diffs."], "typeorm/typeorm"),
     ("card-nestjs.svg", "nestjs", False, "nestjs/cache-manager", "Official NestJS caching module", "SHIPPED",
      ["Cacheable instances with nonBlocking", "mode in the provider factory.", "Part of the v3.1.0 release."], "nestjs/cache-manager"),
     ("card-nestcore.svg", "nestjs", False, "NestJS", "Core framework, microservices package", "MERGED",
