@@ -71,6 +71,7 @@ BRAND = {
     "gmail": "#EA4335", "devdotto": "#FFFFFF", "github": "#FFFFFF",
     "googlechrome": "#4285F4", "wikipedia": "#FFFFFF",
     "firefoxbrowser": "#FF7139", "gitlab": "#FC6D26", "wordpress": "#21759B",
+    "surfsense": {"dark": "#64EBE7", "light": "#0E9F9B"},
 }
 
 
@@ -80,11 +81,18 @@ def icon(slug, x, y, size, t):
     if slug not in ICONS:
         return ""
     fill = BRAND.get(slug, t["text"])
+    if isinstance(fill, dict):
+        # A brand whose colour reads on one theme only carries one per theme.
+        fill = fill[next(name for name, theme in THEMES.items() if theme is t)]
     if fill.upper() == "#FFFFFF":
         fill = t["invertible"]
-    scale = size / 24
-    return (f'<g transform="translate({x},{y}) scale({scale:.3f})">'
-            f'<path d="{ICONS[slug]}" fill="{fill}"/></g>')
+    # Simple Icons draw on a 24 grid; a logo taken from its own repository
+    # keeps its grid and says so.
+    entry = ICONS[slug]
+    d, grid = (entry["d"], entry["size"]) if isinstance(entry, dict) else (entry, 24)
+    scale = f"{size / grid:.3f}" if grid == 24 else f"{size / grid:.4f}"
+    return (f'<g transform="translate({x},{y}) scale({scale})">'
+            f'<path d="{d}" fill="{fill}"/></g>')
 
 
 def ever_logo(x, y, size):

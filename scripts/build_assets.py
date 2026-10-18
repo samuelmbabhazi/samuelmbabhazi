@@ -300,7 +300,7 @@ CARDS = [
      [".wpress backups holding files", "over 2 GiB import again", "instead of crashing Studio."], "Automattic/studio"),
     ("card-wikiedu.svg", "wikipedia", False, "Wiki Education", "Wikipedia education dashboard", "MERGED",
      ["Three fixes: Article Finder list,", "readable account-request errors,", "articles.json default and max limit."], "WikiEducationFoundation/WikiEduDashboard"),
-    ("card-surfsense.svg", "react", False, "SurfSense", "Open source research agent", "MERGED",
+    ("card-surfsense.svg", "surfsense", False, "SurfSense", "Open source research agent", "MERGED",
      ["A failed plugin sign-in now", "says why: typed failure codes", "from FastAPI to the React UI."], "MODSetter/SurfSense"),
 ]
 
