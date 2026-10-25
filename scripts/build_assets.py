@@ -299,11 +299,11 @@ CARDS = [
     ("card-studio.svg", "wordpress", False, "WordPress Studio", "Automattic local development app", "MERGED",
      [".wpress backups holding files", "over 2 GiB import again", "instead of crashing Studio."], "Automattic/studio"),
     ("card-wikiedu.svg", "wikipedia", False, "Wiki Education", "Wikipedia education dashboard", "MERGED",
-     ["Four fixes: Article Finder list,", "readable account-request errors,", "articles.json limits, clone tags."], "WikiEducationFoundation/WikiEduDashboard"),
+     ["Five fixes: Article Finder list,", "account-request errors, JSON limits,", "clone tags, capped article pages."], "WikiEducationFoundation/WikiEduDashboard"),
     ("card-surfsense.svg", "surfsense", False, "SurfSense", "Open source research agent", "MERGED",
      ["A failed plugin sign-in now", "says why: typed failure codes", "from FastAPI to the React UI."], "MODSetter/SurfSense"),
     ("card-gitnexus.svg", "gitnexus", False, "GitNexus", "Code graph engine for AI agents", "MERGED",
-     ["Cross-function explain results", "now report declaration lines", "1-based, like every other tool."], "abhigyanpatwari/GitNexus"),
+     ["Four fixes: 1-based explain lines,", "root-relative backend URL, CRLF-safe", "agent files, Mermaid labels kept."], "abhigyanpatwari/GitNexus"),
 ]
 
 
