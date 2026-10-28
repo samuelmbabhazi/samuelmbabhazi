@@ -56,7 +56,7 @@
 
   <br/>
 
-  <img src="https://komarev.com/ghpvc/?username=samuelmbabhazi&color=656D76&style=flat-square&label=Profile+Views"/>
+  <img src="https://komarev.com/ghpvc/?username=samuelmbabhazi&color=656D76&style=flat-square&label=Profile+Views"/>&nbsp;<a href="https://hub.xerj.org/contributors/samuelmbabhazi"><img src="https://hub.xerj.org/contributors/samuelmbabhazi/badge.svg" alt="XERJ Corpus Hub contributor"/></a>
 
 </div>
 
