@@ -38,7 +38,7 @@
     <circle cx="1030" cy="140" r="46" stroke="#26262B" stroke-width="1.4" fill="none"/>
     <text x="1030" y="150" text-anchor="middle" class="mono" font-size="26" fill="#F4F4F5">&lt;/&gt;</text>
     <text x="64" y="126" class="sans" font-size="68" font-weight="800" fill="#F4F4F5" letter-spacing="-2">Samuel Mbabhazi</text>
-    <text x="66" y="176" class="sans" font-size="30" font-weight="700" fill="#D4D4D8">Full-Stack Developer with 5+ Years of Experience</text>
+    <text x="66" y="176" class="sans" font-size="30" font-weight="700" fill="#D4D4D8">Full-Stack Developer with 6+ Years of Experience</text>
     <rect x="66" y="196" width="690" height="2" fill="#26262B"/>
     <g style="clip-path: inset(0 0 0 0);">
       <rect x="66" y="195" width="240" height="4" rx="2" fill="url(#shine)" class="sweep" opacity="0.85"/>

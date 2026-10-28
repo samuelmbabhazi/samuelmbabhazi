@@ -73,6 +73,7 @@ BRAND = {
     "firefoxbrowser": "#FF7139", "gitlab": "#FC6D26", "wordpress": "#21759B",
     "surfsense": {"dark": "#64EBE7", "light": "#0E9F9B"},
     "gitnexus": {"dark": "#A78BFA", "light": "#7C3AED"},
+    "xerj": {"dark": "#EEBB00", "light": "#A87F00"},
 }
 
 

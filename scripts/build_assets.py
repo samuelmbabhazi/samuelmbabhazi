@@ -49,7 +49,7 @@ def hero(t):
     <circle cx="1030" cy="140" r="46" stroke="{t['border']}" stroke-width="1.4" fill="none"/>
     <text x="1030" y="150" text-anchor="middle" class="mono" font-size="26" fill="{t['text']}">&lt;/&gt;</text>
     <text x="64" y="126" class="sans" font-size="68" font-weight="800" fill="{t['text']}" letter-spacing="-2">Samuel Mbabhazi</text>
-    <text x="66" y="176" class="sans" font-size="30" font-weight="700" fill="{t['textSoft']}">Full-Stack Developer with 5+ Years of Experience</text>
+    <text x="66" y="176" class="sans" font-size="30" font-weight="700" fill="{t['textSoft']}">Full-Stack Developer with 6+ Years of Experience</text>
     <rect x="66" y="196" width="690" height="2" fill="{t['border']}"/>
     <g style="clip-path: inset(0 0 0 0);">
       <rect x="66" y="195" width="240" height="4" rx="2" fill="url(#shine)" class="sweep" opacity="0.85"/>
@@ -95,7 +95,7 @@ def about(t):
     <g class="mono" font-size="15.5">
       <g class="l1">
         <text x="36" y="86"><tspan fill="{t['textDim']}">$</tspan><tspan fill="{t['text']}"> whoami</tspan></text>
-        <text x="36" y="110" fill="{t['textMuted']}">Full-Stack Developer · 5+ years shipping production-grade applications</text>
+        <text x="36" y="110" fill="{t['textMuted']}">Full-Stack Developer · 6+ years shipping production-grade applications</text>
       </g>
       <g class="l2">
         <text x="36" y="142"><tspan fill="{t['textDim']}">$</tspan><tspan fill="{t['text']}"> cat focus.txt</tspan></text>
@@ -303,7 +303,9 @@ CARDS = [
     ("card-surfsense.svg", "surfsense", False, "SurfSense", "Open source research agent", "MERGED",
      ["A failed plugin sign-in now", "says why: typed failure codes", "from FastAPI to the React UI."], "MODSetter/SurfSense"),
     ("card-gitnexus.svg", "gitnexus", False, "GitNexus", "Code graph engine for AI agents", "MERGED",
-     ["Four fixes: 1-based explain lines,", "root-relative backend URL, CRLF-safe", "agent files, Mermaid labels kept."], "abhigyanpatwari/GitNexus"),
+     ["Seven fixes: impact on private types,", "indirect API consumers, logger sink,", "1-based lines, CRLF, Mermaid labels."], "abhigyanpatwari/GitNexus"),
+    ("card-xerj.svg", "xerj", False, "XERJ", "Search engine for AI agents, Rust", "MERGED",
+     ["Four fixes: installer AVX2 check,", "watch skips ignored files, index", "errors named, theme kept per page."], "xerj-org/xerj"),
 ]
 
 
