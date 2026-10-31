@@ -305,7 +305,7 @@ CARDS = [
     ("card-surfsense.svg", "surfsense", False, "SurfSense", "Open source research agent", "MERGED",
      ["A failed plugin sign-in now", "says why: typed failure codes", "from FastAPI to the React UI."], "MODSetter/SurfSense"),
     ("card-gitnexus.svg", "gitnexus", False, "GitNexus", "Code graph engine for AI agents", "MERGED",
-     ["Seven fixes: impact on private types,", "indirect API consumers, logger sink,", "1-based lines, CRLF, Mermaid labels."], "abhigyanpatwari/GitNexus"),
+     ["Eight fixes: refresh_index MCP tool,", "private-type impact, API consumers,", "logger sink, CRLF, Mermaid labels."], "abhigyanpatwari/GitNexus"),
     ("card-xerj.svg", "xerj", False, "XERJ", "Search engine for AI agents, Rust", "MERGED",
      ["Four fixes: installer AVX2 check,", "watch skips ignored files, index", "errors named, theme kept per page."], "xerj-org/xerj"),
 ]

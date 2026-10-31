@@ -8,7 +8,7 @@
 <text x="38" y="45" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#656D76">Code graph engine for AI agents</text>
 <rect x="193" y="17" width="55" height="19" rx="9.5" fill="none" stroke="#1F2328" stroke-opacity="0.7"/>
 <text x="220.5" y="30" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#1F2328" letter-spacing="0.6">MERGED</text>
-<text x="14" y="76" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#59636E">Seven fixes: impact on private types,</text><text x="14" y="91" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#59636E">indirect API consumers, logger sink,</text><text x="14" y="106" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#1F2328">1-based lines, CRLF, Mermaid labels.</text>
+<text x="14" y="76" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#59636E">Eight fixes: refresh_index MCP tool,</text><text x="14" y="91" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#59636E">private-type impact, API consumers,</text><text x="14" y="106" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#1F2328">logger sink, CRLF, Mermaid labels.</text>
 <text x="14" y="134" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="9.5" fill="#656D76">abhigyanpatwari/GitNexus</text>
 <g transform="translate(233,124)" stroke="#59636E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
 <path d="M1.5 10.5 10.5 1.5"/><path d="M3.5 1.5h7v7"/>
