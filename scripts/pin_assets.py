@@ -23,6 +23,7 @@ README = "README.md"
 CDN = f"https://cdn.jsdelivr.net/gh/{REPO}@"
 
 PINNED = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/[\w./-]+)")
+STATS = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/(?:dark|light)/stats\.svg)")
 RELATIVE = re.compile(r"(?<=[\"'])\./(assets/[\w./-]+)")
 
 
@@ -41,6 +42,8 @@ def main() -> int:
     text = open(README).read()
     text = PINNED.sub(lambda m: f"./{m.group(1)}", text)
     text, count = RELATIVE.subn(lambda m: f"{CDN}{ref}/{m.group(1)}", text)
+    # The stats panel changes every day, so it follows the branch.
+    text = STATS.sub(f"{CDN}main/\\1", text)
     open(README, "w").write(text)
 
     print(f"{count} asset URLs pinned to {ref[:9]}")
