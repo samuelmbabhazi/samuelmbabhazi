@@ -1,113 +1,75 @@
 #!/usr/bin/env python3
-"""Regenerates the contribution panel from live GitHub data, in both themes.
+"""Regenerates assets/{light,dark}/stats.svg from live GitHub data, in the README style.
+Runs in CI (.github/workflows/stats.yml). Needs GITHUB_TOKEN or GH_TOKEN."""
 
-Runs in CI on a schedule (see .github/workflows/stats.yml) so the numbers and
-the calendar always reflect real activity. Requires GITHUB_TOKEN or GH_TOKEN.
-Output: assets/dark/stats.svg and assets/light/stats.svg
-"""
-
-import json
-import os
-import sys
-import urllib.request
-
-from theme import THEMES, SANS, MONO, write
+import base64, json, os, re, sys, urllib.parse, urllib.request
 
 LOGIN = "samuelmbabhazi"
-
-QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    followers { totalCount }
-    contributionsCollection {
-      totalCommitContributions
-      totalPullRequestContributions
-      contributionCalendar {
-        totalContributions
-        weeks { contributionDays { contributionCount date } }
-      }
-    }
-  }
+THEMES = {
+    "light": {"muted": "#6B6B6B", "faint": "#A1A1A1", "c1": "#FFFFFF", "c2": "#FAFAFA", "bd": "#E4E4E7", "cal": ["#EFEFF1", "#F7D3CA", "#EFA08C", "#E0573E", "#B8321D"]},
+    "dark": {"muted": "#8F8F8F", "faint": "#5E5E5E", "c1": "#050505", "c2": "#000000", "bd": "#1C1C1C", "cal": ["#111111", "#3A2A27", "#6B342A", "#B24530", "#FF6A50"]},
 }
-"""
+QUERY = """query($login: String!) { user(login: $login) { contributionsCollection {
+  contributionCalendar { totalContributions weeks { contributionDays { contributionCount weekday } } } } } }"""
 
 
 def fetch():
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
         sys.exit("GITHUB_TOKEN missing")
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
+    req = urllib.request.Request("https://api.github.com/graphql",
         data=json.dumps({"query": QUERY, "variables": {"login": LOGIN}}).encode(),
-        headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as response:
-        payload = json.load(response)
+        headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        payload = json.load(r)
     if "errors" in payload:
         sys.exit(f"GraphQL errors: {payload['errors']}")
-    return payload["data"]["user"]
+    return payload["data"]["user"]["contributionsCollection"]["contributionCalendar"]
 
 
-def level(count):
-    if count == 0:
-        return 0
-    if count <= 2:
-        return 1
-    if count <= 5:
-        return 2
-    if count <= 9:
-        return 3
-    return 4
+def font(text):
+    url = "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&text=" + urllib.parse.quote(text)
+    css = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 Chrome/120"}), timeout=30).read().decode()
+    src = re.search(r"url\(([^)]+)\)", css).group(1)
+    data = base64.b64encode(urllib.request.urlopen(src, timeout=30).read()).decode()
+    return f"@font-face{{font-family:'J';src:url(data:font/woff2;base64,{data}) format('woff2')}}"
 
 
-def render(user, t):
-    cc = user["contributionsCollection"]
-    cal = cc["contributionCalendar"]
+def level(n):
+    return 0 if n == 0 else 1 if n <= 2 else 2 if n <= 5 else 3 if n <= 9 else 4
+
+
+def render(cal, t, style):
     weeks = cal["weeks"][-53:]
-
-    x0, y0, sz, gap = 322, 58, 13, 3
-    cells = "".join(
-        f'<rect x="{x0 + wi * (sz + gap)}" y="{y0 + di * (sz + gap)}" width="{sz}" '
-        f'height="{sz}" rx="3" fill="{t["calendar"][level(day["contributionCount"])]}"/>'
-        for wi, week in enumerate(weeks)
-        for di, day in enumerate(week["contributionDays"])
-    )
-    counters = [
-        (str(cal["totalContributions"]), "contributions · past year"),
-        (str(cc["totalPullRequestContributions"]), "pull requests opened"),
-        (str(cc["totalCommitContributions"]), "commits on default branches"),
-        (str(user["followers"]["totalCount"]), "followers"),
-    ]
-    counter_svg = "".join(
-        f'<text x="36" y="{74 + i * 44}" font-family="{SANS}" font-size="26" '
-        f'font-weight="800" fill="{t["text"]}">{value}</text>'
-        f'<text x="128" y="{74 + i * 44}" font-family="{SANS}" font-size="13.5" '
-        f'fill="{t["textDim"]}">{label}</text>'
-        for i, (value, label) in enumerate(counters)
-    )
-    legend = "".join(
-        f'<rect x="{1032 + i * 18}" y="204" width="13" height="13" rx="3" fill="{c}"/>'
-        for i, c in enumerate(t["calendar"])
-    )
-    return f'''<svg width="1200" height="240" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><clipPath id="f"><rect width="1200" height="240" rx="18"/></clipPath></defs>
-<g clip-path="url(#f)">
-<rect width="1200" height="240" fill="{t['panel']}"/>
-<rect x="0.5" y="0.5" width="1199" height="239" rx="17.5" stroke="{t['border']}"/>
-<text x="36" y="38" font-family="{MONO}" font-size="12.5" font-weight="700" fill="{t['textDim']}" letter-spacing="2">CONTRIBUTION ACTIVITY</text>
-{counter_svg}
-<rect x="296" y="30" width="1" height="180" fill="{t['border']}"/>
-{cells}
-<text x="962" y="215" font-family="{SANS}" font-size="12" fill="{t['textDim']}">less</text>{legend}<text x="1126" y="215" font-family="{SANS}" font-size="12" fill="{t['textDim']}">more</text>
-</g></svg>
-'''
+    step = 1136 / len(weeks)
+    size = step - 4
+    y = round(32 + 7 * step + 30)
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" fill="none"><style>{style}</style>',
+           f'<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["c1"]}"/><stop offset="1" stop-color="{t["c2"]}"/></linearGradient></defs>',
+           f'<rect x="0.5" y="0.5" width="1199" height="249" rx="22" fill="url(#g)" stroke="{t["bd"]}"/>']
+    for c, week in enumerate(weeks):
+        for day in week["contributionDays"]:
+            out.append(f'<rect x="{32 + c * step:.1f}" y="{32 + day["weekday"] * step:.1f}" width="{size:.1f}" height="{size:.1f}" rx="3.5" fill="{t["cal"][level(day["contributionCount"])]}"/>')
+    out.append(f'<text x="32" y="{y}" font-family="J" font-size="13" fill="{t["muted"]}">{cal["totalContributions"]:,} contributions in the past year</text>')
+    x = 1168 - 31
+    out.append(f'<text x="{x}" y="{y}" font-family="J" font-size="13" fill="{t["faint"]}">More</text>')
+    x -= 10
+    for i in range(4, -1, -1):
+        x -= 14
+        out.append(f'<rect x="{x}" y="{y - 10}" width="11" height="11" rx="3" fill="{t["cal"][i]}"/>')
+        x -= 3
+    out.append(f'<text x="{x - 6}" y="{y}" font-family="J" font-size="13" fill="{t["faint"]}" text-anchor="end">Less</text></svg>')
+    return "".join(out)
 
 
 def main():
-    user = fetch()
+    cal = fetch()
+    style = font("0123456789, contributionsthepasyrLeMo")
+    root = os.path.join(os.path.dirname(__file__), "..", "assets")
     for name, t in THEMES.items():
-        write("stats.svg", name, render(user, t))
-    print(f"stats.svg written for {', '.join(THEMES)}")
+        with open(os.path.join(root, name, "stats.svg"), "w") as f:
+            f.write(render(cal, t, style))
+    print("stats.svg written for light and dark")
 
 
 if __name__ == "__main__":
