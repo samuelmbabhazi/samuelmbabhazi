@@ -29,4 +29,8 @@ jobs:
             git add assets/dark/stats.svg assets/light/stats.svg
             git commit -m "chore: refresh contribution stats"
             git push
+            # A new URL per refresh: the CDN lets browsers keep a file for 7 days.
+            python3 scripts/pin_assets.py --stats-only
+            git commit -am "chore: pin README stats to $(git rev-parse --short HEAD)"
+            git push
           fi

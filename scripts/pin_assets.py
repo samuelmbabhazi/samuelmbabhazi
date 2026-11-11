@@ -12,6 +12,11 @@ Run it after committing changed assets, then commit the README:
     git commit -am "..."
     python3 scripts/pin_assets.py
     git commit -am "..."
+
+The stats panel is pinned to the last published commit that changed it, not to
+the branch: the CDN tells browsers to keep a file for seven days, so a URL on
+`@main` kept showing an old graph. The daily workflow runs
+`pin_assets.py --stats-only` after each refresh, which moves only those URLs.
 """
 
 import re
@@ -27,7 +32,23 @@ STATS = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/(?:dark|light)/sta
 RELATIVE = re.compile(r"(?<=[\"'])\./(assets/[\w./-]+)")
 
 
+def git(*args: str) -> str:
+    return subprocess.run(["git", *args], capture_output=True, text=True, check=True).stdout.strip()
+
+
+def pin_stats(text: str) -> str:
+    ref = git("log", "-1", "--format=%H", "origin/main", "--",
+              "assets/light/stats.svg", "assets/dark/stats.svg")
+    return STATS.sub(lambda m: f"{CDN}{ref}/{m.group(1)}", text)
+
+
 def main() -> int:
+    if sys.argv[1:] == ["--stats-only"]:
+        text = pin_stats(open(README).read())
+        open(README, "w").write(text)
+        print("stats URLs pinned")
+        return 0
+
     ref = sys.argv[1] if len(sys.argv) > 1 else subprocess.run(
         ["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True
     ).stdout.strip()
@@ -42,8 +63,7 @@ def main() -> int:
     text = open(README).read()
     text = PINNED.sub(lambda m: f"./{m.group(1)}", text)
     text, count = RELATIVE.subn(lambda m: f"{CDN}{ref}/{m.group(1)}", text)
-    # The stats panel changes every day, so it follows the branch.
-    text = STATS.sub(f"{CDN}main/\\1", text)
+    text = pin_stats(text)
     open(README, "w").write(text)
 
     print(f"{count} asset URLs pinned to {ref[:9]}")
