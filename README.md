@@ -28,7 +28,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@10a24e48d7a5e7626a14502df860c2fe23ea9f4c/assets/dark/sec-activity.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@10a24e48d7a5e7626a14502df860c2fe23ea9f4c/assets/light/sec-activity.svg" width="100%" alt="Shipping every week"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@f0e6e77382d55d315b71e67cea207984e6dd3134/assets/dark/stats.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@f0e6e77382d55d315b71e67cea207984e6dd3134/assets/light/stats.svg" width="100%" alt="Contribution activity for the past year"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@ff825cc00df26b20446e600b1f1b74323cc4260b/assets/dark/stats.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@ff825cc00df26b20446e600b1f1b74323cc4260b/assets/light/stats.svg" width="100%" alt="Contribution activity for the past year"></picture>
 
 <br><br>
 
