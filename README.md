@@ -28,7 +28,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@7cc64dfa05abc02b0bcb39efbc43234178c5be44/assets/dark/sec-activity.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@7cc64dfa05abc02b0bcb39efbc43234178c5be44/assets/light/sec-activity.svg" width="100%" alt="Shipping every week"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@db5f62564b4d97c6cbdaedbaf7ba38c3501b3ad2/assets/dark/stats.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@db5f62564b4d97c6cbdaedbaf7ba38c3501b3ad2/assets/light/stats.svg" width="100%" alt="Contribution activity for the past year"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@905440a4187ac4a1798196edfc01209c98b0a56a/assets/dark/stats.svg"><img src="https://cdn.jsdelivr.net/gh/samuelmbabhazi/samuelmbabhazi@905440a4187ac4a1798196edfc01209c98b0a56a/assets/light/stats.svg" width="100%" alt="Contribution activity for the past year"></picture>
 
 <br><br>
 
