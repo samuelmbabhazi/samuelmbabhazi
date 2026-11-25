@@ -18,7 +18,7 @@ QUERY = """query($login: String!, $prs: String!, $merged: String!, $issues: Stri
   user(login: $login) {
     followers { totalCount }
     repositoriesContributedTo(first: 1, privacy: PUBLIC, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) { totalCount }
-    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) { nodes { stargazers { totalCount } } }
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) { nodes { stargazerCount } }
     contributionsCollection {
       commitContributionsByRepository(maxRepositories: 100) { repository { isPrivate } contributions { totalCount } }
       pullRequestReviewContributionsByRepository(maxRepositories: 100) { repository { isPrivate } contributions { totalCount } }
@@ -102,7 +102,7 @@ def totals(data):
     commits = public(activity["commitContributionsByRepository"])
     grade, share = rank(commits, data["prs"]["issueCount"], data["issues"]["issueCount"],
                         public(activity["pullRequestReviewContributionsByRepository"]),
-                        sum(r["stargazers"]["totalCount"] for r in user["repositories"]["nodes"]), user["followers"]["totalCount"])
+                        sum(r["stargazerCount"] for r in user["repositories"]["nodes"]), user["followers"]["totalCount"])
     rows = [("pr", data["prs"]["issueCount"], "Pull requests", "all time"),
             ("merged", data["merged"]["issueCount"], "Merged", "all time"),
             ("commit", commits, "Commits", "past year"),
