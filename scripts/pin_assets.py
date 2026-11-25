@@ -13,9 +13,9 @@ Run it after committing changed assets, then commit the README:
     python3 scripts/pin_assets.py
     git commit -am "..."
 
-The stats panel is pinned to the last published commit that changed it, not to
-the branch: the CDN tells browsers to keep a file for seven days, so a URL on
-`@main` kept showing an old graph. The daily workflow runs
+The stats panels are pinned to the last published commit that changed one of
+them, not to the branch: the CDN tells browsers to keep a file for seven days,
+so a URL on `@main` kept showing an old graph. The daily workflow runs
 `pin_assets.py --stats-only` after each refresh, which moves only those URLs.
 """
 
@@ -28,7 +28,7 @@ README = "README.md"
 CDN = f"https://cdn.jsdelivr.net/gh/{REPO}@"
 
 PINNED = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/[\w./-]+)")
-STATS = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/(?:dark|light)/stats\.svg)")
+STATS = re.compile(re.escape(CDN) + r"[0-9a-zA-Z._-]+/(assets/(?:dark|light)/stats[\w-]*\.svg)")
 RELATIVE = re.compile(r"(?<=[\"'])\./(assets/[\w./-]+)")
 
 
@@ -38,7 +38,7 @@ def git(*args: str) -> str:
 
 def pin_stats(text: str) -> str:
     ref = git("log", "-1", "--format=%H", "origin/main", "--",
-              "assets/light/stats.svg", "assets/dark/stats.svg")
+              "assets/light/stats*.svg", "assets/dark/stats*.svg")
     return STATS.sub(lambda m: f"{CDN}{ref}/{m.group(1)}", text)
 
 
